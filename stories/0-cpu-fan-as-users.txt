@@ -1,0 +1,19 @@
+I was inspired to create this website by <hunter.computer>. 
+
+The website of today is hidden behind several layers of proxies and virtualization,
+with the goal being "more on one". Slower Internet is a process of cultivating a garden of machines that fit localized, individual desires.
+This is not a radical idea - 
+
+Such a world
+instills apathy due to obscurity towards technology. The spinning CPU fan brings me one step
+and my closer to real humans.
+
+# Components
+1. ESP 8266: Bought this after a series of stolen bikes and shoes at iitb. The 
+utopian plan was to create a network of nodes to track my bike at all times.
+- I then bought a bike lock for Rs. 700 and my great technological idea
+was rendered useless by 3 feet of reinforced rubber and a combination lock.
+And so i gained one tiny microcontroller, waiting to be used.
+
+2. Asus Fan 
+Remnants from a failed fan replacement using my old laptop. 

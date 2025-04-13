@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&display=swap');
+/* Refer are.na for CSS alternatives */
+
+.jetbrains-mono-0 {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.grid {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 24px 24px;
+}  
+
+/* Custom IDs */
+#center {
+    text-align:center
+}
+
+
+/* Regular tags */
+body {
+    background: rgb(21, 21, 21);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 28px;
+}
+
+main {
+    max-width: 580px;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+p {
+    line-height: 1em;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    /* padding: 25%; */
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 100;
+    font-style:normal
+}
+
+a {
+    display: block;
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal; 
+    color: palevioletred;  
+    background-color: transparent;
+    text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted; /* for safari */
+}
+
+a.hover {
+    text-decoration: underline;
+}
+
+/* Use this after the first article is ready */
+/* a {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+a:link {
+    text-decoration: none;
+    color: darkgray
+}
+
+a:visited {
+    text-decoration: none;
+    color: darkgray
+}
+
+a:hover {
+    text-decoration: underline;
+    color: lightgray;
+} */
+
+#post-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+}
+  
+#post-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#gift-link {
+    /* position: relative; */
+    display:inline-block;
+    /* left: 40px; */
+}
