@@ -24,6 +24,10 @@ REMEMBER THE HUMAN
 
 
 # TODOs
+@apr 16 2025
+- need to add a video of self on name hover.
+
+
 Make it hippie-looking, but ensure MAX security to beat the tech nerds.
 
 2. Host on local, allow internet connection

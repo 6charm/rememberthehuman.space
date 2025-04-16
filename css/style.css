@@ -31,6 +31,7 @@
     background-size: 24px 24px;
 }  
 
+
 /* Custom IDs */
 #center {
     text-align:center
@@ -38,9 +39,16 @@
 
 
 /* Regular tags */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
-    background: rgb(21, 21, 21);
-    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    color: rgb(21, 21, 21);
+    /* background: rgb(21, 21, 21);
+    color: rgb(255, 255, 255); */
     font-size: 20px;
     line-height: 28px;
 }
@@ -52,7 +60,7 @@ main {
 }
 
 p {
-    line-height: 1em;
+    line-height: 1.2em;
     display: block;
     font-family: "JetBrains Mono", monospace;
     font-size: 1rem;
@@ -62,9 +70,10 @@ p {
 
 h1 {
     /* padding: 25%; */
-    font-family: "Silkscreen", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    line-height: 1em;
 }
 
 h2 {
@@ -74,20 +83,20 @@ h2 {
 }
 
 a {
-    display: block;
+    display: inline;    
     font-family: "Silkscreen", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal; 
-    color: palevioletred;  
+    color: red;
     background-color: transparent;
-    /* text-decoration: underline dotted; */
-    text-decoration: none;
-    /* -webkit-text-decoration: underline dotted; for safari */
+    text-decoration: underline dotted;
+    /* text-decoration: none; */
+    -webkit-text-decoration: underline dotted; /*for safari*/
 }
 
 a.hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Use this after the first article is ready */
