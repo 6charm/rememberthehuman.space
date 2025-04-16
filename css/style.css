@@ -161,7 +161,7 @@ a:hover {
 
 #gif {
     position: fixed; /* without this, the gif remains fixed dim*/
-    width: 180px;
+    width: 160px;
     top: 140px; /* place directly below the text */
     left: 180px;
     display: none;
@@ -175,6 +175,6 @@ a:hover {
 
 #self-gif:hover img {
     display: block;
-    width: 180px;
+    width: 160px;
     height: auto;
 }
