@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 .jetbrains-mono-0 {
     font-family: "JetBrains Mono", monospace;
@@ -67,7 +69,8 @@ main {
 p {
     line-height: 1.2em;
     display: block;
-    font-family: "JetBrains Mono", monospace;
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: "Lora";
     font-size: 1rem;
     font-weight: normal;
     font-style: normal;
@@ -76,7 +79,9 @@ p {
 
 h1 {
     /* padding: 25%; */
-    font-family: "JetBrains Mono", monospace;
+    /* font-family: "JetBrains Mono", monospace; */
+    margin-top: 0;
+    font-family: "Lora";
     font-weight: 400;
     font-style: normal;
     line-height: 1rem;
@@ -107,16 +112,16 @@ a.hover {
 
 /* Use this after the first article is ready */
 a {
-    display: block;
-    font-family: "JetBrains Mono", monospace;
+    display: inline-block;
+    font-family: "Lora";
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
 a:link {
-    text-decoration: none;
-    color: darkgray
+    text-decoration:none;
+    color: rgb(100, 100, 100);
 }
 
 a:visited {
@@ -125,8 +130,8 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
-    color: lightgray;
+    text-decoration: none;
+    color: red;
 } 
 
 #post-list ul {
@@ -144,7 +149,7 @@ a:hover {
     display: inline-block;
     position: relative;
     cursor: grabbing;
-    font-family: "Silkscreen", sans-serif;
+    font-family: "DM Mono";
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
@@ -208,13 +213,13 @@ a:hover {
 }
 
 .text-lg {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Lora";
     font-size: 1.125rem;
     line-height: 1.75rem
 }
 
 .text-5xl {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Lora";
     font-size: 3rem;
     line-height: 1
 }
@@ -226,4 +231,13 @@ a:hover {
 
 .text-center {
     text-align: center
+}
+
+/* About */
+.about-link {
+    font-family: "Lora";
+    font-size: 1rem;
+    font-weight: normal;
+    position: relative;
+    left: 30px;
 }
