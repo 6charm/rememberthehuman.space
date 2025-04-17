@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="author" content="Armaan Chowfin">
-    <title>Remember-The-Human </title>
+    <title>Remember The Human</title>
     <!-- <link rel="icon" href="assets/server-live-stats-0.png" type="image/x-icon"/> -->
-    <link rel="stylesheet" href="/css/style.css?version=-116"/>
+    <script type="module" src="./scripts/main.js"></script>
+    <link rel="stylesheet" href="/css/style.css?version=-156"/>
   </head>
   <body>
+    <div id="mobile-blocker" class="m-blocker bg-white text-lg hidden flex">
+      <div class="text-white text-center">
+        <span class="text-5xl">Please</span><br>
+        visit from a desktop computer
+      </div>
+    </div>
     <main>
     <header>
        <h1>REMEMBER THE HUMAN</h1>
@@ -18,7 +25,10 @@
       Hi I'm 
       <span id="self-gif">
         Armaan
-        <img id="gif" src="./assets/self-0.gif" alt="self">
+        <video id="gif" muted="true" autoplay="on" loop="on">
+          <source src="./assets/self-1-5_3-1080-60.mp4"/>
+        </video>
+        <!-- <img id="gif" src="./assets/self-0.gif" alt="self"> -->
       </span> 
       and<br>
       I'm discovering how to <strong>live well</strong>
