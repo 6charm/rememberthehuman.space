@@ -16,7 +16,6 @@ Render on other devices: https://www.youtube.com/watch?v=uRYHX4EwYYA
 - Connect to same network, find localhost port your website is running on,
 connect to laptop-ip:<port> from mobile.
 
-
 ## Design
 REMEMBER THE HUMAN
 1. A Slower Internet

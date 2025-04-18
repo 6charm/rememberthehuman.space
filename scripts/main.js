@@ -34,4 +34,4 @@ if (isMobile()) {
     blocker.classList.add("flex");
 } else {
     setupVideoFollow();
-}
+  }

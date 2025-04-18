@@ -66,50 +66,6 @@ main {
     overflow: visible;
 }
 
-p {
-    line-height: 1.2em;
-    display: block;
-    /* font-family: "JetBrains Mono", monospace; */
-    font-family: "Lora";
-    font-size: 1rem;
-    font-weight: normal;
-    font-style: normal;
-    overflow: visible;
-}
-
-h1 {
-    /* padding: 25%; */
-    /* font-family: "JetBrains Mono", monospace; */
-    margin-top: 0;
-    font-family: "Lora";
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1rem;
-}
-
-h2 {
-    font-family: "Silkscreen", sans-serif;
-    font-weight: 100;
-    font-style:normal
-    
-}
-
-/* a {
-    display: inline;    
-    font-family: "Silkscreen", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal; 
-    color: red;
-    background-color: transparent;
-    text-decoration: underline dotted;
-    -webkit-text-decoration: underline dotted;
-} */
-
-a.hover {
-    text-decoration: none;
-}
-
 /* Use this after the first article is ready */
 a {
     display: inline-block;
@@ -133,6 +89,51 @@ a:hover {
     text-decoration: none;
     color: red;
 } 
+
+p {
+    line-height: 1.2em;
+    display: block;
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: "Lora";
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    overflow: visible;
+}
+
+h1 {
+    /* padding: 25%; */
+    /* font-family: "JetBrains Mono", monospace; */
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    font-family: "Lora";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2rem;
+}
+
+h1 a {
+    color: black !important;
+}
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 100;
+    font-style:normal
+    
+}
+
+/* a {
+    display: inline;    
+    font-family: "Silkscreen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal; 
+    color: red;
+    background-color: transparent;
+    text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;
+} */
 
 #post-list ul {
     list-style-type: none;
@@ -236,8 +237,9 @@ a:hover {
 /* About */
 .about-link {
     font-family: "Lora";
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: normal;
     position: relative;
+    /* display: inline; */
     left: 30px;
 }
