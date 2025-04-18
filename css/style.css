@@ -91,7 +91,7 @@ a:hover {
 } 
 
 p {
-    line-height: 1.2em;
+    line-height: 1em;
     display: block;
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Lora";
