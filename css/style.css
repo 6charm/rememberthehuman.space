@@ -73,22 +73,18 @@ a {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    color: rgb(88, 88, 88);
 }
 
 a:link {
     text-decoration:none;
-    color: rgb(100, 100, 100);
-}
-
-a:visited {
-    text-decoration: none;
-    color: darkgray
+    color:black;
 }
 
 a:hover {
     text-decoration: none;
-    color: red;
-} 
+    color: #D40000;
+}
 
 p {
     line-height: 1em;
@@ -154,7 +150,7 @@ h2 {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    color: red;
+    color: #D40000;
     background-color: transparent;
     text-decoration: underline dotted;
     -webkit-text-decoration: underline dotted; /* for safari */
@@ -237,9 +233,24 @@ h2 {
 /* About */
 .about-link {
     font-family: "Lora";
-    /* font-size: 1rem; */
+    font-style: normal;
     font-weight: normal;
     position: relative;
-    /* display: inline; */
-    left: 30px;
+    display: inline-block;
+    left: 370px;
+    top: -118px
+}
+
+.star-logo-0 {
+    position: relative;
+    display: inline-block;
+    left: 380px;
+    top: -58px;
+}
+
+.star-logo-1 {
+    position: relative;
+    display: inline-block;
+    left: 344px;
+    top: -58px;
 }
