@@ -267,7 +267,4 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     display: inline-block; 
-    background: transparent;  
-    fill: #000000 !important;
-    stroke: #000000 !important;
 }
