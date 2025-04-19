@@ -154,6 +154,7 @@ h2 {
     z-index: 10;
     pointer-events: none; /* so it doesn't block mouse */
     border-radius: 0.4em;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
   
 #self-gif:hover {
