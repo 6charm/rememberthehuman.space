@@ -260,3 +260,14 @@ h2 {
     transform: translateX(-50%);
     display: inline-block;
 }
+
+.star-logo-about {
+    position: fixed;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block; 
+    background: transparent;  
+    fill: #000000 !important;
+    stroke: #000000 !important;
+}

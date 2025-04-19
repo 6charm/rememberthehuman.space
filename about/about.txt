@@ -1,12 +1,23 @@
 ABOUT
 Remember The Human is a collection of essays and 
-notes to self in various media formats. Aspects of my work that remind
+notes to self in various media formats. 
+
+Aspects of my work that remind
 me of the wider human context.
 
 
 
-My message: Technical work is meaningless without a deep appreciation
-and connection to those that will eventually interact with it.
+My message: Technical work is meaningless without a deep
+connection and relevance to those that will eventually interact with it.
+Computation has evolved to be calculated and logical - due to the (digital) nature of 
+the hardware technologies we have that enable this computation.  While the
+shhift from human computers to automated logic circuits has enabled 
+rapid expansion, the present day appears to be highly conducive to <repetition>??
+
+Remember The Human is a project that explores aspects of technical work
+that remind us of the wider human context.
+
+
 
 
 
@@ -15,5 +26,12 @@ and connection to those that will eventually interact with it.
 
 
 MOTIVATION
+The most advanced technologies on the planet are found in dark, isolated rooms 
+that sound like this
+
+
 I am a student of Computer Science - specifically - computer systems. (add margin explainers)
 My work till now has involved 
+
+
+--- Everything here is a work in progress ---

@@ -20,6 +20,9 @@ connect to laptop-ip:<port> from mobile.
 REMEMBER THE HUMAN
 1. A Slower Internet
 
+## SVGS
+- need to use svg 1.1 to render correctly
+
 
 
 # TODOs
