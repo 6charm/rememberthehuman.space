@@ -1,6 +1,11 @@
 ABOUT
 Remember The Human is a collection of essays and 
-notes to self in various media formats. 
+notes to self across media formats that discuss
+meaningful components of ??life.?? 
+
+
+aspects of technological advancement
+
 
 Aspects of my work that remind
 me of the wider human context.
@@ -18,6 +23,14 @@ Remember The Human is a project that explores aspects of technical work
 that remind us of the wider human context.
 
 
+## Why am I really doing this? (meta, personal, does not need to be online)
+- an outlet for creative expression
+- a platform to document my ideas and thoughts for a wider audience. An introduction
+to me for someone that has not spoken to me before.
+- 
+
+# What am I doing? (this should go to the about section)
+- 
 
 
 

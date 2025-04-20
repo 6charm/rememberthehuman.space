@@ -267,5 +267,24 @@ h2 {
     bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
-    display: inline-block; 
+    display: block; 
+}
+
+.star-logo-about img {
+    display: block;
+    transition: transform 1.4s ease-in-out;
+    transform-origin: center center;
+  }
+  
+.star-logo-about:hover img {
+    transform: rotate(360deg);
+}
+
+.wip {
+    position: fixed;
+    bottom: 70px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
 }
