@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url("normalize.css");
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+
 .silkscreen-regular {
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
@@ -219,7 +225,7 @@ h2 {
     position: relative;
     display: inline-block;
     left: 360px;
-    top: -118px;
+    top: -104px;
     font-size: 1rem;
 }
 
@@ -236,14 +242,14 @@ h2 {
     position: relative;
     display: inline-block;
     left: 380px;
-    top: -58px;
+    top: -44px;
 }
 
 .star-logo-1 {
     position: relative;
     display: inline-block;
     left: 344px;
-    top: -58px;
+    top: -44px;
 }
 
 .star-logo-mobile {
