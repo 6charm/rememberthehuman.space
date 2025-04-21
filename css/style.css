@@ -3,13 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url("normalize.css");
-.jetbrains-mono-0 {
-    font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-}
-
 .silkscreen-regular {
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
@@ -135,7 +128,6 @@ h2 {
     position: relative;
     cursor: grabbing;
     font-family: "DM Mono";
-    font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     color: #D40000;
