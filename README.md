@@ -4,6 +4,11 @@ Series of experiments to help keep us grounded as we accelerate towards a digita
 - Handmade web. (no ai)
 - validator.w3.web
 
+# CSS
+- https://chenhuijing.com/blog/understanding-positioning-in-css/
+- https://noti.st/huijing/B3BMi1/box-alignment
+
+
 # DAILY CALENDAR
 5-apr-2025
 - []Nerd font to Essay names, in log format with date

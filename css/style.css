@@ -87,6 +87,7 @@ a {
 
 p {
     line-height: 1em;
+    margin-top: 0.6em;
     display: block;
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Lora";
@@ -96,15 +97,27 @@ p {
     overflow: visible;
 }
 
+.site-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start; /* pushes nav-bar to the right */
+    flex-wrap: nowrap; /* allows wrapping on smaller screens */
+    min-width: 1024px;
+}
+
 h1 {
     /* padding: 25%; */
     /* font-family: "JetBrains Mono", monospace; */
-    margin-top: 0;
+    margin: 0;
+    margin-right: 0.6em;
+    padding: 0;
     /* margin-bottom: 0; */
     font-family: "Lora";
     font-weight: 400;
     font-style: normal;
     line-height: 1.2rem;
+    /* flex-grow: 1; */
+    flex-wrap: nowrap;
 }
 
 h1 a {
@@ -217,26 +230,42 @@ h2 {
     text-align: center
 }
 
-/* About */
-.about-link {
+.nav-wrapper {
+    display: flex;
+}
+
+.nav-bar {
     font-family: "Lora";
     font-style: normal;
     font-weight: normal;
-    position: relative;
-    display: inline-block;
-    left: 360px;
-    top: -104px;
     font-size: 1rem;
-}
-
-.about-link a {
+    display: flex;
+    gap: 12px;
+    align-items:baseline;
     color: rgb(99, 99, 99);
 }
 
-.about-link a:hover {
+.bracket-item {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bracket-item.underlined {
+    text-decoration: underline;  /* Underline while clicked */
+}
+
+.nav-item a {
+    color: rgb(99, 99, 99);
+    text-decoration: none;
+}
+
+.nav-item a:hover {
     color: #D40000;
 }
 
+.separator {
+    color: rgb(99, 99, 99);
+}
 
 .star-logo-0 {
     position: relative;

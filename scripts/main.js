@@ -34,4 +34,15 @@ if (isMobile()) {
     blocker.classList.add("flex");
 } else {
     setupVideoFollow();
-  }
+}
+
+const bracketItems = document.querySelectorAll('.bracket-item');
+
+bracketItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        bracketItems.forEach(function(bracket) {
+            bracket.classList.remove('underlined');
+        });
+        this.classList.add('underlined');
+    });
+});

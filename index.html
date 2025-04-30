@@ -8,7 +8,7 @@
     <title>Remember The Human</title>
     <link rel="icon" href="assets/armaan-logo-filled-1.svg" sizes="48X48"/>
     <script type="module" src="./scripts/main.js"></script>
-    <link rel="stylesheet" href="/css/style.css?version=-9090"/>
+    <link rel="stylesheet" href="/css/style.css?version=-1"/>
   </head>
   <body>
     <div id="mobile-blocker" class="m-blocker bg-white text-lg hidden flex">
@@ -21,9 +21,18 @@
       </div>
     </div>
     <main>
-    <header>
-      <h1><a href="https://rememberthehuman.space">REMEMBER THE HUMAN</a></h1>
-    </header>
+      <header class="site-header">
+        <h1><a href="https://rememberthehuman.space">REMEMBER THE HUMAN</a></h1>
+        <div class="nav-bar">
+          <div class="nav-item"><a href="./about">About</a></div>
+          <span class="separator">&#903;</span>
+          <div class="nav-item bracket-item">Text</div> <!-- Added bracket-item class -->
+          <!-- <span class="separator">&#903;</span> -->
+          <div class="nav-item bracket-item">Audio</div> <!-- Added bracket-item class -->
+          <span class="separator">&#903;</span>
+          <div class="nav-item"><a href="./experiments">Experiments</a></div>
+        </div>
+      </header>
     <div>
     <p>
       Hi I'm 
@@ -43,9 +52,7 @@
   <div class="star-logo-1">
     <img src = "assets/armaan-logo-filled-1-red.svg" width="64" height="64" alt="logo red">
   </div>
-  
-  <div class="about-link"><a href="./about">About</a></div>
-    </main>
+  </main>
 </body>
 </html>
 
