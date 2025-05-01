@@ -181,7 +181,7 @@ h2 {
 #self-gif:hover video {
     object-fit: cover;
     display: block;
-    width: 220px;
+    width: 210px;
     height: auto;
 }
 
