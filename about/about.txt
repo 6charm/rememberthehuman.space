@@ -10,8 +10,6 @@ aspects of technological advancement
 Aspects of my work that remind
 me of the wider human context.
 
-
-
 My message: Technical work is meaningless without a deep
 connection and relevance to those that will eventually interact with it.
 Computation has evolved to be calculated and logical - due to the (digital) nature of 
