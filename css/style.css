@@ -267,18 +267,24 @@ h2 {
     color: rgb(99, 99, 99);
 }
 
-.star-logo-0 {
-    position: relative;
-    display: inline-block;
-    left: 380px;
-    top: -45px;
+.star-logos-container {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.star-logo-1 {
-    position: relative;
-    display: inline-block;
-    left: 344px;
-    top: -45px;
+.rotating-logo {
+    display: flex;
+    transition: transform 1.6s ease-in-out;
+    transform-origin: center center;
+}
+
+.rotating-logo:hover {
+    transform: rotate(360deg);
 }
 
 .star-logo-mobile {
@@ -287,24 +293,6 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
-}
-
-.star-logo-about {
-    position: fixed;
-    bottom: 20px; 
-    left: 50%;
-    transform: translateX(-50%);
-    display: block; 
-}
-
-.star-logo-about img {
-    display: block;
-    transition: transform 1.4s ease-in-out;
-    transform-origin: center center;
-  }
-  
-.star-logo-about:hover img {
-    transform: rotate(360deg);
 }
 
 .wip {
