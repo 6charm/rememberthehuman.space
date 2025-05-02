@@ -52,8 +52,6 @@ video {
 body {
     background: rgb(255, 255, 255);
     color: rgb(21, 21, 21);
-    /* background: rgb(21, 21, 21);
-    color: rgb(255, 255, 255); */
     font-size: 20px;
     line-height: 28px;
 }
@@ -65,29 +63,13 @@ main {
     overflow: visible;
 }
 
-/* Use this after the first article is ready */
-/* a {
-    display: inline-block;
-    font-family: "Lora";
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    color: rgb(88, 88, 88);
-} */
-
-
-/* a:link {
-    text-decoration:none;
-    color:black;
-} */
-
 a {
     text-decoration: none;
 }
 
 p {
     line-height: 1em;
-    margin-top: 0.6em;
+    margin-top: 0.4em;
     display: block;
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Lora";
@@ -106,29 +88,18 @@ p {
 }
 
 h1 {
-    /* padding: 25%; */
-    /* font-family: "JetBrains Mono", monospace; */
     margin: 0;
     margin-right: 0.6em;
     padding: 0;
-    /* margin-bottom: 0; */
     font-family: "Lora";
     font-weight: 400;
     font-style: normal;
     line-height: 1.2rem;
-    /* flex-grow: 1; */
     flex-wrap: nowrap;
 }
 
 h1 a {
     color: black;
-}
-
-h2 {
-    font-family: "Silkscreen", sans-serif;
-    font-weight: 100;
-    font-style:normal
-    
 }
 
 #post-list ul {
@@ -146,8 +117,9 @@ h2 {
     display: inline-block;
     position: relative;
     cursor: grabbing;
-    font-family: "DM Mono";
+    font-family: "Lora";
     font-weight: normal;
+    letter-spacing: 0.02em;
     font-style: normal;
     color: #D40000;
     background-color: transparent;
