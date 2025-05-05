@@ -46,3 +46,25 @@ bracketItems.forEach(function(item) {
         this.classList.add('underlined');
     });
 });
+
+document.querySelectorAll('.rotating-logo').forEach(logo => {
+  let angle = 0;
+  let animationFrameId = null;
+
+  function rotate() {
+    angle = (angle + 1.6) % 360;
+    logo.style.transform = `rotate(${angle}deg)`;
+    animationFrameId = requestAnimationFrame(rotate);
+  }
+
+  logo.addEventListener('mouseenter', () => {
+    if (!animationFrameId) {
+      animationFrameId = requestAnimationFrame(rotate);
+    }
+  });
+
+  logo.addEventListener('mouseleave', () => {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+  });
+});

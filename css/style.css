@@ -251,13 +251,13 @@ h1 a {
 
 .rotating-logo {
     display: flex;
-    transition: transform 1.6s ease-in-out;
     transform-origin: center center;
+    will-change: transform;
 }
 
-.rotating-logo:hover {
+/* .rotating-logo:hover {
     transform: rotate(360deg);
-}
+} */
 
 .star-logo-mobile {
     position: fixed;
