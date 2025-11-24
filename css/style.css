@@ -387,3 +387,72 @@ html {
     text-decoration: none;
     font-weight: 500;
   }
+
+/* style.css (Modified Existing Sections) */
+
+main {
+    max-width: none; /* Allows the content to fill the width */
+    /* width: 90%; Removed/Changed */ 
+    font-size: 1.2rem;
+    padding: 20px; /* ❗ Keep this to preserve the original 20px left margin */
+    overflow: visible;
+}
+
+@media (min-width: 768px) {
+    main {
+      max-width: none;       
+      width: 100%; 
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    main {
+      width: 100%; 
+    }
+  }
+
+.site-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    /* ❗ REMOVE min-width: 1024px; */ 
+}
+
+
+/* style.css (New Section to be added) */
+
+.about-page-content {
+    display: flex;
+    margin-top: 120px;
+    width: 100%;
+}
+
+.about-title {
+    width: 100px; /* 1. Sets the width of the 'ABOUT' column. */
+    flex-shrink: 0; /* 2. Prevents the 'ABOUT' column from collapsing. */
+    font-family: "Lora"; 
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase; /* Makes the title match the image */
+    margin-right: 120px; /* 3. Controls the space between the title and content (like gap). */
+    text-align: left;
+}
+
+.about-text {
+    max-width: 600px;      /* readable width */
+    margin: 0 auto;        /* center it relative to whole page */
+    transform: translateX(-60px); /* cancel ABOUT title width + margin-right */
+}
+
+/* Ensure paragraph inside about-text also follows styling */
+.about-text p {
+    line-height: 1.5em; /* Improves text readability. */
+    margin-top: 0; 
+}
+
+/* Re-apply margin to subsequent paragraphs to separate blocks of text */
+.about-text p + p {
+    margin-top: 1.5em; 
+}
