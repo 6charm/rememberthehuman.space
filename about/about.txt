@@ -1,4 +1,12 @@
 ABOUT
+Unemotional observation - critical for good technical work -  
+            is hard to sustain in a city like Mumbai; you encounter
+            deeply human realities by simply living here. 
+            Remember The Human is a collection of essays across media formats, 
+            created as I engage in my work as a programmer.
+
+
+
 Remember The Human is a collection of essays and 
 notes to self across media formats that discuss
 meaningful components of ??life.?? 
