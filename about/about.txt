@@ -3,6 +3,17 @@ Remember The Human is a collection of essays and
 notes to self across media formats that discuss
 meaningful components of ??life.?? 
 
+            Engineering teaches you to observe phenomena from 
+            a distance and model them as systems using mathematics. 
+            Mathematics teaches you that many problems are solvable - this 
+            has ascribed legitimacy to using computational tools that 
+            implement mathematical procedures.I believe such tools only 
+            matter when they remain connected
+            to the wider human context. This belief drives my work.
+            
+            Remember The Human is a collection of 
+            audio essays and notes that explore 
+
 I live in Mumbai, India - I am deeply moved just in the process of living in this city. 
 
 Engineering teaches us to observe phenomena from
@@ -10,15 +21,38 @@ a distance and model them precisely using mathematics. Many
 problems in mathematics are solvable, building 
 confidence or delusion in ability to affect change.
 
+            But technical work only matters when it stays rooted in the people it touches. 
+            Computation is precise, logical and optimized, human life is not. 
+            
+            Remember The Human is an attempt to hold those two realities together — 
+            to build things without forgetting the context they live in.
+
 The determinism of this field gives methe 
 confidence in my degree of control. Every project I choose to work on 
 reminds me of the wider human context - and perhaps the delusion that the
 solution to every human problem will be aided by 
 
 
+        Mathematics teaches you that problems are solvable. Enough of them are that
+          you start believing you can control outcomes. Life 
+
+            Not all problems in mathematics are solvable, but many are. This determinism 
+            is responsible for the confidence - or delusion - in the STEM graduate's 
+            belief in controlling outcomes. Computational tools
+            are part of the solution to human problems, but threaten erasure
+            of humanism itself.
+
 I want to make my city a better place to exist - in every aspect. 
 aspects of technological advancement
 
+
+Engineering teaches you to observe the world from a distance and treat it as a system. 
+Mathematics teaches you that many problems are solvable, and computation gives you the tools to act on that belief. 
+But these tools only matter when they stay connected to the human context they affect. 
+That idea drives my work.
+
+Remember The Human is a collection of audio essays and notes exploring 
+the space where technical thinking meets lived experience.
 
 Aspects of my work that remind
 me of the wider human context.
