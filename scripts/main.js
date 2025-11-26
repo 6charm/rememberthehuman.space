@@ -95,12 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Content for each section
   const sectionContents = {
     all: `<div class="bracket-content"><p></p></div>`,
-    code: `<div class="bracket-content"><p></p></div>`,
-    audio: `
-      <div class="scroll-container">
-        ${makeCard("AUD &#903; CURATED", "Chris Williamson and Naval Ravikant", "PODCAST: 44 HARSH TRUTHS TO IMPROVE YOUR LIFE", "https://www.youtube.com/watch?v=KyfUysrNaco")}
-      </div>
-    `
+    audio: `<div class="bracket-content"><p></p></div>`
   };
 
   function loadSection(page) {
