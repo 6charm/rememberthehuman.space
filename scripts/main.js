@@ -54,7 +54,7 @@ document.querySelectorAll('.rotating-logo').forEach(logo => {
   });
 });
 
-function makeCard(meta, authors, title, href = '#') {
+function makeCard(meta, authors, title, desc="", href = '#') {
   return `
      <div class="scroll-item">
        <a href="${href}">
@@ -62,6 +62,9 @@ function makeCard(meta, authors, title, href = '#') {
          <div class="authors">${authors}</div>
          <div class="title">${title}</div>
        </a>
+       <p>
+       ${desc}
+       </p>
      </div>
   `;
 }
@@ -92,11 +95,29 @@ document.addEventListener('DOMContentLoaded', function() {
     setupVideoFollow();
   }
 
-  // Content for each section
+  const projectData =[
+    {meta:"NEW", authors:"Armaan Chowfin and Narayan Rangaraj", title:"OPTIMIZED RAILWAY TIMETABLES", desc:"The Mumbai Local trains are experiencing a crisis: 20 deaths and grevious injuries every day.\n\nOver the next 10 years, the Mumbai Rail Vikas Corporation (MRVC) aims to phase out the non-AC rakes plying the Mumbai suburban railway network, and replace them with AC rakes with closing doors. To achieve this, the MRVC requires a data-driven approach to explore the rakes most suitable for replacement. The goal of this Github Project is to provide such a tool in the form of an extensible, GUI-based application.\nUsing a software representation of the railway timetable, the simulator generates an interactive rake-cycle visualization. Users can select any time period of interest and run analyses based on constraints derived from passenger preferences. One key analysis measures the “mixing” of AC and non-AC rakes at stations, quantified via cross-entropy. Until full AC transition, the objective is to maximize this value to maintain a balanced mix across the network. Finally, using a PESP formulation of the rail scheduling problem, we intend to generate optimal timetables dynamically given the various constraints."},
+    {meta:"NEW", authors:"Armaan Chowfin and Daniel Schurmann", title:"IMROVED DJ SCRATCHING IN MIXXX", desc:"Mixxx uses the SoundTouch and RubberBand time-stretching libraries for resampling during a keyLock operation. However, these libraries are unsuitable for scratching due to the fast changing tempo and pitch. Currently a faster, handcrafted linear interpolation algorithm is used - but there have been reports of suboptimal audio quality.Digital Signal Processing (DSP) theory tells us that linear interpolation is not ideal, and that a sinc-based resampler will always return interpolated values identical to the original analog signal, under certain theoretical constraints. However, practical implementations of sinc resampling are computationally heavy and generally unsuitable for low-latency realtime software such as Mixxx. Therefore...One objective of this GSoC project was to explore the feasibility of using sinc interpolation for scratching. To this end, the libsamplerate and libzita resample latencies were evaluated.Another focus was to investigate and improve the performance of the current linear resampler. Here, we observed that the libsamplerate linear interpolator outperformed our own, reducing per-buffer resample latency from 20µs to 10µs."}
+  ]
+
+  function buildColumnSection(items) {
+    let html = `<div class="column-wrapper">`;
+    items.forEach(item => {
+      html += makeCard(item.meta, item.authors, item.title,item.desc, item.href);
+    });
+    html += `</div>`;
+    return html;
+  }
+
   const sectionContents = {
-    all: `<div class="bracket-content"><p></p></div>`,
-    audio: `<div class="bracket-content"><p></p></div>`
+    Projects: buildColumnSection(projectData),
   };
+
+  // // Content for each section
+  // const sectionContents = {
+  //   Projects: `<div class="bracket-content"><p></p></div>`,
+  //   Notes: `<div class="bracket-content"><p></p></div>`
+  // };
 
   function loadSection(page) {
     // Update active state
@@ -127,12 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Load 'All' section by default on initial page load
-  const defaultSection = 'all';
+  // Load 'Projects' section by default on initial page load
+  const defaultSection = 'Projects';
   loadSection(defaultSection);
   
-  // Optional: Find and highlight the 'All' button in navbar
-  const allButton = document.querySelector('.bracket-item[data-page="all"]');
+  // Find and highlight the 'Projects' button in navbar
+  const allButton = document.querySelector('.bracket-item[data-page="Projects"]');
   if (allButton) {
     allButton.classList.add('underlined');
   }
