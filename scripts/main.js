@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Load 'Projects' section by default on initial page load
-  const defaultSection = 'Projects';
+  const defaultSection = 'Notes';
   loadSection(defaultSection);
   
   // Find and highlight the 'Projects' button in navbar
