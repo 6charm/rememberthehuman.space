@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Load 'Projects' section by default on initial page load
+  // Load 'Notes' section by default on initial page load
   const defaultSection = 'Notes';
   loadSection(defaultSection);
   
-  // Find and highlight the 'Projects' button in navbar
-  const allButton = document.querySelector('.bracket-item[data-page="Projects"]');
+  // Find and highlight the 'Notes' button in navbar
+  const allButton = document.querySelector('.bracket-item[data-page="Notes"]');
   if (allButton) {
     allButton.classList.add('underlined');
   }
