@@ -100,6 +100,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // {meta:"NEW", authors:"Armaan Chowfin and Daniel Schurmann", title:"IMROVED DJ SCRATCHING IN MIXXX", desc:"Mixxx uses the SoundTouch and RubberBand time-stretching libraries for resampling during a keyLock operation. However, these libraries are unsuitable for scratching due to the fast changing tempo and pitch. Currently a faster, handcrafted linear interpolation algorithm is used - but there have been reports of suboptimal audio quality.Digital Signal Processing (DSP) theory tells us that linear interpolation is not ideal, and that a sinc-based resampler will always return interpolated values identical to the original analog signal, under certain theoretical constraints. However, practical implementations of sinc resampling are computationally heavy and generally unsuitable for low-latency realtime software such as Mixxx. Therefore...One objective of this GSoC project was to explore the feasibility of using sinc interpolation for scratching. To this end, the libsamplerate and libzita resample latencies were evaluated.Another focus was to investigate and improve the performance of the current linear resampler. Here, we observed that the libsamplerate linear interpolator outperformed our own, reducing per-buffer resample latency from 20µs to 10µs."}
   ]
 
+  const notesData = [
+    {
+      title: "0 Testing",
+      audio: "audio/like-soundcloud.mp3"
+    },
+    {
+      title: "1 Grid Test",
+      audio: "audio/like-soundcloud.mp3"
+    },
+  ];
+
+  function makeAudioTile(title, audioUrl) {
+    return `
+      <div class="note-tile">
+        <p>${title}</p>
+        <audio controls preload="none">
+          <source src="${audioUrl}" type="audio/mpeg">
+        </audio>
+      </div>
+    `;
+  }
+
+  function buildNotesGrid(items) {
+    let html = `<div class="notes-grid">`;
+    items.forEach(item => {
+      html += makeAudioTile(item.title, item.audio);
+    });
+    html += `</div>`;
+    return html;
+  }
+
   function buildColumnSection(items) {
     let html = `<div class="column-wrapper">`;
     items.forEach(item => {
@@ -111,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const sectionContents = {
     Projects: buildColumnSection(projectData),
+    Notes: buildNotesGrid(notesData)
   };
 
   // // Content for each section

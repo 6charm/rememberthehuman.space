@@ -560,3 +560,42 @@ main {
   font-weight: inherit;
   color: inherit;
 } */
+
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  /* border: 1px solid #000; */
+  padding: 20px; /* key line */
+  direction: rtl; 
+  align-content: flex-end;
+  flex-direction: column-reverse;
+}
+
+.note-tile {
+  /* border: 1px dashed #666; */
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* horizontal centering */
+  justify-content: center;   /* vertical centering if height grows */
+  text-align: center;        /* centers the <p> text */
+  direction: ltr; 
+}
+/* 
+.note-tile p {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+} */
+
+
+.note-tile audio {
+  width: 100%;          /* fills the tile width */
+  height: 60px;         /* increase height for a squarer appearance */
+  border-radius: 0;     /* removes rounded corners */
+  background: #f0f0f0;  /* optional: makes it visually distinct */
+  outline: none;        /* optional: removes focus outline */
+}
