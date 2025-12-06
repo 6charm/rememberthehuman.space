@@ -568,7 +568,7 @@ main {
   gap: 10px;
 
   /* border: 1px solid #000; */
-  padding: 20px; /* key line */
+  padding: 60px; /* key line */
   direction: rtl; 
   align-content: flex-end;
   flex-direction: column-reverse;
