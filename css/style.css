@@ -419,8 +419,13 @@ main {
     align-items: baseline;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    /* ❗ REMOVE min-width: 1024px; */ 
 }
+
+.site-header a:hover {
+  color: #D40000;
+}
+
+
 
 
 /* style.css (New Section to be added) */
