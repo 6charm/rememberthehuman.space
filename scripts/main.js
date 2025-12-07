@@ -101,17 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 
   const notesData = [
-    // {
-    //   title: "0 Testing",
-    //   audio: "assets/audio/0-intro.mp3"
-    // },
+    {
+      title: "0 Testing",
+      audio: "assets/audio/0-intro.mp3"
+    },
     // {
     //   title: "1 Grid Test",
     //   audio: "assets/audio/1-intro.mp3"
     // },
   ];
 
-  
 
   function makeAudioTile(title, audioUrl) {
     return `
