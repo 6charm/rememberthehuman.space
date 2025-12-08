@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const notesData = [
     {
       title: "0-test",
-      audio: "assets/audio/0-intro.mp3"
+      audio: "assets/audio/1-intro.mp3"
     },
     // {
     //   title: "1 Grid Test",
