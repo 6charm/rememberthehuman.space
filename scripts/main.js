@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const notesData = [
     {
-      title: "0 Testing",
+      title: "0",
       audio: "assets/audio/0-intro.mp3"
     },
     // {
@@ -115,9 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function makeAudioTile(title, audioUrl) {
     return `
       <div class="note-tile">
-        <audio controls preload="none">
-          <source src="${audioUrl}" type="audio/mp3">
-        </audio>
+      <p>${title}</p>
+        <div class="audio-wrapper">
+          <img src="assets/octotat-red.svg" class="audio-thumb">
+          <audio controls preload="none">
+            <source src="${audioUrl}" type="audio/mp3">
+          </audio>
+        </div>
       </div>
     `;
   }

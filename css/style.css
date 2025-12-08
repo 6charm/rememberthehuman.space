@@ -604,3 +604,30 @@ main {
   background: #f0f0f0;  /* optional: makes it visually distinct */
   outline: none;        /* optional: removes focus outline */
 }
+
+/* === CONFIG: change this once to scale image + audio height === */
+:root {
+  --audio-thumb-size:80px;   /* adjust to any size (64px, 120px, 150px) */
+}
+
+/* ===================== */
+
+.audio-wrapper {
+  display: grid;
+  grid-template-columns: var(--audio-thumb-size) 1fr;
+  width: 100%;
+  align-items: center;
+}
+
+.audio-thumb {
+  width: var(--audio-thumb-size);
+  height: var(--audio-thumb-size);
+  object-fit: cover;
+  display: block;
+}
+
+.note-tile audio {
+  width: 100%;
+  height: var(--audio-thumb-size);   /* ★ perfect edge-to-edge match */
+  border-radius: 0;
+}
