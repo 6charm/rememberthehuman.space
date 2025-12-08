@@ -103,21 +103,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const notesData = [
     {
       title: "0-intro",
-      audio: "assets/audio/1-intro.mp3"
+      audio: "assets/audio/1-intro.mp3",
+      thumb: "octotat-red"
     },
-    // {
-    //   title: "1 Grid Test",
-    //   audio: "assets/audio/1-intro.mp3"
-    // },
+    {
+      title: "1-test",
+      audio: "assets/audio/1.mp3",
+      thumb: "octotat-black"
+    },
   ];
 
 
-  function makeAudioTile(title, audioUrl) {
+  function makeAudioTile(title, audioUrl, thumb) {
     return `
       <div class="note-tile">
       <p>${title}</p>
         <div class="audio-wrapper">
-          <img src="assets/octotat-red.svg" class="audio-thumb">
+          <img src="assets/${thumb}.svg" class="audio-thumb">
           <audio controls preload="none">
             <source src="${audioUrl}" type="audio/mp3">
           </audio>
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function buildNotesGrid(items) {
     let html = `<div class="notes-grid">`;
     items.forEach(item => {
-      html += makeAudioTile(item.title, item.audio);
+      html += makeAudioTile(item.title, item.audio, item.thumb);
     });
     html += `</div>`;
     return html;
