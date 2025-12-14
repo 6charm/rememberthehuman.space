@@ -574,7 +574,7 @@ main {
 
   /* border: 1px solid #000; */
   padding: 60px 60px 60px 10px; /* key line */
-  direction: ltr; 
+  direction: rtl; 
   align-content: flex-end;
   flex-direction: column-reverse;
 }
