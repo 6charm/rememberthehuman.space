@@ -570,11 +570,11 @@ main {
 .notes-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 60px;
 
   /* border: 1px solid #000; */
-  padding: 60px; /* key line */
-  direction: rtl; 
+  padding: 60px 60px 60px 10px; /* key line */
+  direction: ltr; 
   align-content: flex-end;
   flex-direction: column-reverse;
 }

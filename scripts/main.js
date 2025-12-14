@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const notesData = [
     {
       title: "0-intro",
-      audio: "assets/audio/1-intro.mp3",
+      audio: "assets/audio/1intro.mp3",
       thumb: "octotat-red"
     },
     {
