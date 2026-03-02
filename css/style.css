@@ -568,8 +568,9 @@ main {
 
 
 .notes-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid; */
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
   gap: 60px;
 
   /* border: 1px solid #000; */
