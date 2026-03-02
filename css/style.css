@@ -223,8 +223,12 @@ h1 a {
     text-decoration: none;
 }
 
-.bracket-item.underlined {
-    text-decoration: underline;  /* Underline while clicked */
+.bracket-item.underlined::before {
+    content: "[";
+}
+
+.bracket-item.underlined::after {
+    content: "]";
 }
 
 .nav-item a {
@@ -448,10 +452,15 @@ main {
     text-align: left;
 }
 
+.about-text-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateX(-60px);
+}
+
 .about-text {
-    max-width: 600px;      /* readable width */
-    margin: 0 auto;        /* center it relative to whole page */
-    transform: translateX(-60px); /* cancel ABOUT title width + margin-right */
+    /* content flows normally inside wrapper */
 }
 
 /* Ensure paragraph inside about-text also follows styling */
@@ -631,4 +640,48 @@ main {
   width: 100%;
   height: var(--audio-thumb-size);   /* ★ perfect edge-to-edge match */
   border-radius: 0;
+}
+
+/* --- Margin Notes (Gwern-style annotations) --- */
+
+.annotated {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.annotated:hover,
+.annotated.is-active {
+    color: #444;
+    text-decoration-color: #444;
+}
+
+.margin-note {
+    position: absolute;
+    left: calc(100% + 40px);
+    width: 220px;
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgb(90, 90, 90);
+    border-left: 2px solid #444;
+    padding-left: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.margin-note a {
+    color: rgb(90, 90, 90);
+    text-decoration: underline;
+}
+
+.margin-note a:hover {
+    color: #D40000;
+}
+
+.margin-note.is-visible {
+    opacity: 1;
+    pointer-events: auto;
 }

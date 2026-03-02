@@ -12,6 +12,56 @@ return (
 );
 }
 
+function setupMarginNotes() {
+    const triggers = document.querySelectorAll('.annotated[data-note]');
+    if (!triggers.length) return;
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const noteId = trigger.dataset.note;
+            const note = document.getElementById(noteId);
+            if (!note) return;
+
+            const isVisible = note.classList.contains('is-visible');
+
+            // Close all notes first
+            document.querySelectorAll('.margin-note.is-visible').forEach(n => {
+                n.classList.remove('is-visible');
+                n.setAttribute('aria-hidden', 'true');
+            });
+            document.querySelectorAll('.annotated.is-active').forEach(t => {
+                t.classList.remove('is-active');
+            });
+
+            if (!isVisible) {
+                // Position note vertically aligned with trigger
+                const wrapper = trigger.closest('.about-text-wrapper');
+                if (wrapper) {
+                    const wrapperRect = wrapper.getBoundingClientRect();
+                    const triggerRect = trigger.getBoundingClientRect();
+                    note.style.top = (triggerRect.top - wrapperRect.top) + 'px';
+                }
+                note.classList.add('is-visible');
+                note.setAttribute('aria-hidden', 'false');
+                trigger.classList.add('is-active');
+            }
+        });
+    });
+
+    // Click outside closes notes
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.annotated') && !e.target.closest('.margin-note')) {
+            document.querySelectorAll('.margin-note.is-visible').forEach(n => {
+                n.classList.remove('is-visible');
+                n.setAttribute('aria-hidden', 'true');
+            });
+            document.querySelectorAll('.annotated.is-active').forEach(t => {
+                t.classList.remove('is-active');
+            });
+        }
+    });
+}
+
 function setupVideoFollow() {
     const selfGif = document.getElementById("self-gif");
     const video = document.getElementById("gif");
@@ -185,6 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  // --- Margin Notes ---
+  setupMarginNotes();
 
   // Load 'Notes' section by default on initial page load
   const defaultSection = 'Notes';
