@@ -672,12 +672,44 @@ main {
     transition: opacity 0.2s ease;
 }
 
-.margin-note a {
+.margin-note[data-side="left"] {
+    left: auto;
+    right: calc(100% + 40px);
+    border-left: none;
+    border-right: 2px solid #444;
+    padding-left: 0;
+    padding-right: 12px;
+    text-align: right;
+}
+
+.margin-note[data-side="right"] {
+    left: calc(100% + 40px);
+    right: auto;
+}
+
+.cite-img {
+    cursor: pointer;
+    position: relative;
+}
+
+.cite-img-overlay {
+    position: absolute;
+    top: var(--img-top, 0);
+    left: var(--img-left, -300px);
+    width: var(--img-width, 200px);
+    max-width: none;
+    z-index: 10;
+    filter: brightness(var(--img-brightness, 1));
+}
+
+.margin-note a,
+.margin-note .cite-img {
     color: rgb(90, 90, 90);
     text-decoration: underline;
 }
 
-.margin-note a:hover {
+.margin-note a:hover,
+.margin-note .cite-img:hover {
     color: #D40000;
 }
 

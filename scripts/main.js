@@ -62,6 +62,38 @@ function setupMarginNotes() {
     });
 }
 
+function setupCiteImages() {
+    const cites = document.querySelectorAll('.cite-img[data-img]');
+    if (!cites.length) return;
+
+    cites.forEach(cite => {
+        cite.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const existing = cite.querySelector('.cite-img-overlay');
+            if (existing) {
+                existing.remove();
+                return;
+            }
+
+            // Close any other open cite images
+            document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
+
+            const img = document.createElement('img');
+            img.src = cite.dataset.img;
+            img.className = 'cite-img-overlay';
+            cite.appendChild(img);
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.cite-img')) {
+            document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
+        }
+    });
+}
+
 function setupVideoFollow() {
     const selfGif = document.getElementById("self-gif");
     const video = document.getElementById("gif");
@@ -144,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Not mobile, setting up video follow");
     setupVideoFollow();
   }
+
+  setupCiteImages();
 
   const projectData =[
     // {meta:"NEW", authors:"Armaan Chowfin and Narayan Rangaraj", title:"OPTIMIZED RAILWAY TIMETABLES", desc:"The Mumbai Local trains are experiencing a crisis: 20 deaths and grevious injuries every day.\n\nOver the next 10 years, the Mumbai Rail Vikas Corporation (MRVC) aims to phase out the non-AC rakes plying the Mumbai suburban railway network, and replace them with AC rakes with closing doors. To achieve this, the MRVC requires a data-driven approach to explore the rakes most suitable for replacement. The goal of this Github Project is to provide such a tool in the form of an extensible, GUI-based application.\nUsing a software representation of the railway timetable, the simulator generates an interactive rake-cycle visualization. Users can select any time period of interest and run analyses based on constraints derived from passenger preferences. One key analysis measures the “mixing” of AC and non-AC rakes at stations, quantified via cross-entropy. Until full AC transition, the objective is to maximize this value to maintain a balanced mix across the network. Finally, using a PESP formulation of the rail scheduling problem, we intend to generate optimal timetables dynamically given the various constraints."},
