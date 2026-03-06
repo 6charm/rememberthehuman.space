@@ -743,5 +743,6 @@ main {
 
     .cite-img-overlay {
         max-width: 80vw;
+        --img-left: -200px;
     }
 }
