@@ -717,3 +717,40 @@ main {
     opacity: 1;
     pointer-events: auto;
 }
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .about-page-content {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .about-title {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 1.5em;
+    }
+
+    .about-text-wrapper {
+        max-width: 100%;
+        transform: none;
+    }
+
+    .margin-note {
+        position: static;
+        width: 100%;
+        border-left: 2px solid #444;
+        padding-left: 12px;
+        margin-top: 1em;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .margin-note[data-side="left"] {
+        border-right: none;
+        border-left: 2px solid #444;
+        padding-right: 0;
+        padding-left: 12px;
+        text-align: left;
+    }
+}
