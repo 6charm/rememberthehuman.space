@@ -742,11 +742,6 @@ main {
     }
 
     .cite-img-overlay {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: var(--img-width, 200px);
         max-width: 80vw;
     }
 }
