@@ -99,7 +99,9 @@ function setupVideoFollow() {
     const video = document.getElementById("gif");
   
     if (!selfGif || !video) return;
-  
+
+    video.playbackRate = 0.75; // adjust: 1.0 = normal, 0.5 = half speed
+
     const style = getComputedStyle(video);
     const offsetX = parseFloat(style.getPropertyValue('--gif-offset-x')) || 15;
     const offsetY = parseFloat(style.getPropertyValue('--gif-offset-y')) || 15;
