@@ -100,9 +100,13 @@ function setupVideoFollow() {
   
     if (!selfGif || !video) return;
   
+    const style = getComputedStyle(video);
+    const offsetX = parseFloat(style.getPropertyValue('--gif-offset-x')) || 15;
+    const offsetY = parseFloat(style.getPropertyValue('--gif-offset-y')) || 15;
+
     selfGif.addEventListener("mousemove", (e) => {
-      video.style.left = `${e.clientX + 15}px`;
-      video.style.top = `${e.clientY + 15}px`;
+      video.style.left = `${e.clientX + offsetX}px`;
+      video.style.top = `${e.clientY + offsetY}px`;
     });
   
     selfGif.addEventListener("mouseenter", () => {
@@ -158,19 +162,31 @@ document.addEventListener('DOMContentLoaded', function() {
   if (isMobile()) {
     console.log("Mobile detected, showing blocker");
     const video = document.getElementById("gif");
-    const blocker = document.getElementById("mobile-blocker");
-    
-    console.log("Video element:", video);
-    console.log("Blocker element:", blocker);
-    
+
     if (video) {
       video.remove();
       console.log("Video removed");
     }
-    if (blocker) {
+
+    // Inject blocker if it doesn't already exist in the page
+    let blocker = document.getElementById("mobile-blocker");
+    if (!blocker) {
+      blocker = document.createElement("div");
+      blocker.id = "mobile-blocker";
+      blocker.className = "m-blocker bg-white text-lg flex";
+      blocker.innerHTML = `
+        <div class="text-white text-center">
+          <span class="text-5xl">Please</span><br>
+          visit from a desktop computer
+        </div>
+        <div class="star-logo-mobile">
+          <img src="/assets/armaan-logo.svg" width="64" height="64" alt="logo">
+        </div>
+      `;
+      document.body.prepend(blocker);
+    } else {
       blocker.classList.remove("hidden");
       blocker.classList.add("flex");
-      console.log("Blocker should now be visible");
     }
   } else {
     console.log("Not mobile, setting up video follow");

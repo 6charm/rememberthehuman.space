@@ -122,18 +122,20 @@ h1 a {
     font-weight: normal;
     letter-spacing: 0.02em;
     font-style: normal;
-    color: #D40000;
+    color: inherit;
     background-color: transparent;
     text-decoration: underline dotted;
     -webkit-text-decoration: underline dotted; /* for safari */
 }
 
 #gif {
+    --gif-offset-x: -600px; /* adjust: horizontal offset from cursor (negative = left) */
+    --gif-offset-y: -180px; /* adjust: vertical offset from cursor (negative = up) */
     position: fixed; /* without this, the gif remains fixed dim*/
     aspect-ratio: 5/3;
     width: 180px;
-    top: 116px; /* place directly below the text */
-    left: 180px;
+    top: 10px;
+    left: 10px;
     display: none;
     z-index: 10;
     pointer-events: none; /* so it doesn't block mouse */
@@ -142,7 +144,7 @@ h1 a {
 }
   
 #self-gif:hover {
-    text-decoration: none;
+    color: #D40000;
 }
 
 #self-gif:hover img {
