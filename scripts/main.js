@@ -8,7 +8,7 @@ console.log("Max touch points:", navigator.maxTouchPoints);
 function isMobile() {
 return (
     ("ontouchstart" in window || navigator.maxTouchPoints > 0) &&
-    window.innerWidth <= 768 
+    window.innerWidth <= 768
 );
 }
 
@@ -97,7 +97,7 @@ function setupCiteImages() {
 function setupVideoFollow() {
     const selfGif = document.getElementById("self-gif");
     const video = document.getElementById("gif");
-  
+
     if (!selfGif || !video) return;
 
     video.playbackRate = 0.75; // adjust: 1.0 = normal, 0.5 = half speed
@@ -110,11 +110,11 @@ function setupVideoFollow() {
       video.style.left = `${e.clientX + offsetX}px`;
       video.style.top = `${e.clientY + offsetY}px`;
     });
-  
+
     selfGif.addEventListener("mouseenter", () => {
       video.style.display = "block";
     });
-  
+
     selfGif.addEventListener("mouseleave", () => {
       video.style.display = "none";
     });
@@ -159,7 +159,7 @@ function makeCard(meta, authors, title, desc="", href = '#') {
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOM loaded, checking mobile again");
-  
+
   // Handle mobile detection first
   if (isMobile()) {
     console.log("Mobile detected, showing blocker");
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.bracket-item').forEach(i => {
       i.classList.toggle('underlined', i.dataset.page === page);
     });
-    
+
     // Insert/replace dynamic content
     const container = document.getElementById('dynamic-content');
     container.innerHTML = sectionContents[page] || '';
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load 'Notes' section by default on initial page load
   const defaultSection = 'Notes';
   loadSection(defaultSection);
-  
+
   // Find and highlight the 'Notes' button in navbar
   const allButton = document.querySelector('.bracket-item[data-page="Notes"]');
   if (allButton) {
