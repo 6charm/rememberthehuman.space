@@ -766,20 +766,18 @@ main {
         box-shadow: 0 0 0 4px #fff;
     }
 
-    /* Margin notes render as a centered card that overlays the body text;
-       the lifted trigger word floats above the card as visual context. */
+    /* Margin notes render as a fixed card anchored just below the tapped
+       trigger (top set inline by JS so it tracks the trigger position). */
     .margin-note,
     .margin-note[data-side="left"],
     .margin-note[data-side="right"] {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        right: auto;
+        left: 16px;
+        right: 16px;
         bottom: auto;
-        transform: translate(-50%, -50%);
-        width: 88vw;
-        max-width: 480px;
-        max-height: 70vh;
+        transform: none;
+        width: auto;
+        max-width: none;
         overflow-y: auto;
         margin: 0;
         padding: 18px 20px;
@@ -806,8 +804,8 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         width: auto;
-        max-width: 90vw;
-        max-height: 80vh;
+        max-width: 60vw;
+        max-height: 40vh;
         z-index: 1000;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }

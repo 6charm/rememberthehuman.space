@@ -34,17 +34,25 @@ function setupMarginNotes() {
             });
 
             if (!isVisible) {
-                // Position note vertically aligned with trigger (desktop only;
-                // on mobile the note renders inline below the trigger).
                 if (window.innerWidth > 768) {
+                    // Desktop: align note with trigger inside the wrapper.
                     const wrapper = trigger.closest('.about-text-wrapper');
                     if (wrapper) {
                         const wrapperRect = wrapper.getBoundingClientRect();
                         const triggerRect = trigger.getBoundingClientRect();
                         note.style.top = (triggerRect.top - wrapperRect.top) + 'px';
                     }
+                    note.style.maxHeight = '';
                 } else {
-                    note.style.top = '';
+                    // Mobile: position the note as a viewport-fixed card
+                    // immediately below the tapped trigger so it stays
+                    // visually anchored to what the user clicked.
+                    const triggerRect = trigger.getBoundingClientRect();
+                    const gap = 8;
+                    const margin = 16;
+                    note.style.top = (triggerRect.bottom + gap) + 'px';
+                    note.style.maxHeight =
+                        Math.max(120, window.innerHeight - triggerRect.bottom - gap - margin) + 'px';
                 }
                 note.classList.add('is-visible');
                 note.setAttribute('aria-hidden', 'false');
