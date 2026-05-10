@@ -83,30 +83,38 @@ function setupCiteImages() {
     const cites = document.querySelectorAll('.cite-img[data-img]');
     if (!cites.length) return;
 
+    let openCite = null;
+
     cites.forEach(cite => {
         cite.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
 
-            const existing = cite.querySelector('.cite-img-overlay');
-            if (existing) {
-                existing.remove();
+            // Always clear any existing overlay first.
+            document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
+
+            if (openCite === cite) {
+                openCite = null;
                 return;
             }
 
-            // Close any other open cite images
-            document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
-
+            openCite = cite;
             const img = document.createElement('img');
             img.src = cite.dataset.img;
             img.className = 'cite-img-overlay';
-            cite.appendChild(img);
+            // On mobile, append to <body> so the overlay escapes the
+            // margin-note's stacking context and renders above everything.
+            // On desktop, keep the legacy anchor (negative offsets relative
+            // to the inline cite span).
+            const target = window.innerWidth <= 768 ? document.body : cite;
+            target.appendChild(img);
         });
     });
 
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.cite-img')) {
+        if (!e.target.closest('.cite-img') && !e.target.closest('.cite-img-overlay')) {
             document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
+            openCite = null;
         }
     });
 }

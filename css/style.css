@@ -762,8 +762,6 @@ main {
     .annotated.is-active {
         position: relative;
         z-index: 800;
-        background: #fff;
-        box-shadow: 0 0 0 4px #fff;
     }
 
     /* Margin notes render as a fixed card anchored just below the tapped
@@ -796,8 +794,9 @@ main {
         pointer-events: auto;
     }
 
-    /* Cite-img overlays render as a centered modal-style image that the
-       user can tap-anywhere to dismiss. Desktop behavior is unchanged. */
+    /* Cite-img overlays render as a centered modal-style image. Background
+       is solid white so the *-tp.png transparent regions don't show the
+       page text behind. Desktop behavior is unchanged. */
     .cite-img-overlay {
         position: fixed;
         top: 50%;
@@ -806,6 +805,7 @@ main {
         width: auto;
         max-width: 60vw;
         max-height: 40vh;
+        background: #fff;
         z-index: 1000;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
