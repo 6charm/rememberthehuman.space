@@ -1,3 +1,6 @@
+import { projects } from "../data/projects.js";
+import { mountProjectPages } from "./project-page.js";
+
 // Add debug logging at the top
 console.log("Script loaded");
 console.log("Is mobile:", ("ontouchstart" in window || navigator.maxTouchPoints > 0) && window.innerWidth <= 768);
@@ -216,6 +219,18 @@ function makeCard(meta, authors, title, desc="", href = '#') {
   `;
 }
 
+function makeProjectCard(title, href = '#', num = 1) {
+  const padded = String(num).padStart(2, '0');
+  return `
+    <div class="project-item">
+      <a href="${href}">
+        <span class="num">${padded}</span>
+        <span class="title">${title}</span>
+      </a>
+    </div>
+  `;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOM loaded, checking mobile again");
 
@@ -263,10 +278,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setupCiteImages();
 
-  const projectData =[
-    // {meta:"NEW", authors:"Armaan Chowfin and Narayan Rangaraj", title:"OPTIMIZED RAILWAY TIMETABLES", desc:"The Mumbai Local trains are experiencing a crisis: 20 deaths and grevious injuries every day.\n\nOver the next 10 years, the Mumbai Rail Vikas Corporation (MRVC) aims to phase out the non-AC rakes plying the Mumbai suburban railway network, and replace them with AC rakes with closing doors. To achieve this, the MRVC requires a data-driven approach to explore the rakes most suitable for replacement. The goal of this Github Project is to provide such a tool in the form of an extensible, GUI-based application.\nUsing a software representation of the railway timetable, the simulator generates an interactive rake-cycle visualization. Users can select any time period of interest and run analyses based on constraints derived from passenger preferences. One key analysis measures the “mixing” of AC and non-AC rakes at stations, quantified via cross-entropy. Until full AC transition, the objective is to maximize this value to maintain a balanced mix across the network. Finally, using a PESP formulation of the rail scheduling problem, we intend to generate optimal timetables dynamically given the various constraints."},
-    // {meta:"NEW", authors:"Armaan Chowfin and Daniel Schurmann", title:"IMROVED DJ SCRATCHING IN MIXXX", desc:"Mixxx uses the SoundTouch and RubberBand time-stretching libraries for resampling during a keyLock operation. However, these libraries are unsuitable for scratching due to the fast changing tempo and pitch. Currently a faster, handcrafted linear interpolation algorithm is used - but there have been reports of suboptimal audio quality.Digital Signal Processing (DSP) theory tells us that linear interpolation is not ideal, and that a sinc-based resampler will always return interpolated values identical to the original analog signal, under certain theoretical constraints. However, practical implementations of sinc resampling are computationally heavy and generally unsuitable for low-latency realtime software such as Mixxx. Therefore...One objective of this GSoC project was to explore the feasibility of using sinc interpolation for scratching. To this end, the libsamplerate and libzita resample latencies were evaluated.Another focus was to investigate and improve the performance of the current linear resampler. Here, we observed that the libsamplerate linear interpolator outperformed our own, reducing per-buffer resample latency from 20µs to 10µs."}
-  ]
+  // Derived from the single source of truth in /data/projects.js
+  const projectData = projects.map(p => ({ title: p.shortName, href: p.href }));
+
+  // Mount project landing + week pages (no-op on pages without [data-project])
+  mountProjectPages();
 
   const notesData = [
     {
@@ -307,8 +323,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function buildColumnSection(items) {
     let html = `<div class="column-wrapper">`;
-    items.forEach(item => {
-      html += makeCard(item.meta, item.authors, item.title,item.desc, item.href);
+    items.forEach((item, i) => {
+      html += makeProjectCard(item.title, item.href, i + 1);
     });
     html += `</div>`;
     return html;
@@ -340,9 +356,29 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.bracket-item[data-page]').forEach(item => {
     item.addEventListener('click', function(e) {
       e.preventDefault();
-      loadSection(this.dataset.page);
+      const page = this.dataset.page;
+      loadSection(page);
+      // Reflect the active section in the URL so the address bar mirrors state.
+      // Replace rather than push so back-button doesn't fill with hash entries.
+      history.replaceState(null, '', '#' + page.toLowerCase());
     });
   });
+
+  // Keep the home page in sync if the hash changes (back/forward, manual edit).
+  window.addEventListener('hashchange', () => {
+    const target = sectionFromHash();
+    if (target) loadSection(target);
+  });
+
+  function sectionFromHash() {
+    const raw = window.location.hash.replace(/^#/, '').toLowerCase();
+    if (!raw) return null;
+    // Match the hash against known data-page values, case-insensitively.
+    const match = Object.keys(sectionContents).find(
+      key => key.toLowerCase() === raw
+    );
+    return match || null;
+  }
 
   // Handle other nav items
   document.querySelectorAll('.nav-item:not([data-page])').forEach(item => {
@@ -357,14 +393,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Margin Notes ---
   setupMarginNotes();
 
-  // Load 'Notes' section by default on initial page load
-  const defaultSection = 'Notes';
-  loadSection(defaultSection);
+  // Initial section: prefer URL hash, fall back to 'Notes'.
+  const initialSection = sectionFromHash() || 'Notes';
+  loadSection(initialSection);
+  if (!sectionFromHash()) {
+    history.replaceState(null, '', '#' + initialSection.toLowerCase());
+  }
 
-  // Find and highlight the 'Notes' button in navbar
-  const allButton = document.querySelector('.bracket-item[data-page="Notes"]');
-  if (allButton) {
-    allButton.classList.add('underlined');
+  // Highlight the active button in the navbar
+  const activeButton = document.querySelector(`.bracket-item[data-page="${initialSection}"]`);
+  if (activeButton) {
+    activeButton.classList.add('underlined');
   }
 
   // Handle bracket item clicks (your original bracket functionality)
