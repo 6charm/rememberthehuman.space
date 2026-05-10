@@ -797,14 +797,22 @@ main {
     /* Cite-img overlays render as a centered modal-style image with the
        PNG's native alpha intact, so transparent regions reveal the
        margin note (and through gaps, the about text) below. */
+    /* Anchored by bottom so multiple cite-img cutouts share a common
+       baseline. Per-image overrides via inline CSS vars on the cite span:
+         --img-bottom-m   (distance from viewport bottom; default 30vh)
+         --img-width-m    (max width; default 60vw)
+         --img-height-m   (max height; default 40vh)
+         --img-left-m     (horizontal nudge; default 0px) */
     .cite-img-overlay {
         position: fixed;
-        top: 50%;
+        top: auto;
+        bottom: var(--img-bottom-m, 30vh);
         left: 50%;
-        transform: translate(-50%, -50%);
+        right: auto;
+        transform: translateX(calc(-50% + var(--img-left-m, 0px)));
         width: auto;
-        max-width: 60vw;
-        max-height: 40vh;
+        max-width: var(--img-width-m, 60vw);
+        max-height: var(--img-height-m, 40vh);
         z-index: 1000;
     }
 

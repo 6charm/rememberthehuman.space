@@ -102,11 +102,16 @@ function setupCiteImages() {
             const img = document.createElement('img');
             img.src = cite.dataset.img;
             img.className = 'cite-img-overlay';
-            // --img-brightness is set as an inline CSS var on the cite
-            // span. On mobile the img is appended to <body> and no longer
-            // inherits it, so copy it onto the img directly.
-            const brightness = cite.style.getPropertyValue('--img-brightness');
-            if (brightness) img.style.setProperty('--img-brightness', brightness);
+            // CSS vars set inline on the cite span. On mobile the img is
+            // appended to <body> and no longer inherits, so copy them.
+            const propagateVars = [
+                '--img-brightness',
+                '--img-bottom-m', '--img-width-m', '--img-height-m', '--img-left-m'
+            ];
+            propagateVars.forEach(name => {
+                const value = cite.style.getPropertyValue(name);
+                if (value) img.style.setProperty(name, value);
+            });
             // Tapping the photo dismisses only the photo; the margin note
             // stays. stopPropagation prevents the document-level cite and
             // margin-note handlers from firing.
