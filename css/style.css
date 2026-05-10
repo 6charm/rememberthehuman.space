@@ -794,9 +794,9 @@ main {
         pointer-events: auto;
     }
 
-    /* Cite-img overlays render as a centered modal-style image. Background
-       is solid white so the *-tp.png transparent regions don't show the
-       page text behind. Desktop behavior is unchanged. */
+    /* Cite-img overlays render as a centered modal-style image with the
+       PNG's native alpha intact, so transparent regions reveal the
+       margin note (and through gaps, the about text) below. */
     .cite-img-overlay {
         position: fixed;
         top: 50%;
@@ -805,7 +805,6 @@ main {
         width: auto;
         max-width: 60vw;
         max-height: 40vh;
-        background: #fff;
         z-index: 1000;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
