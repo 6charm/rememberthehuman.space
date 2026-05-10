@@ -102,6 +102,14 @@ function setupCiteImages() {
             const img = document.createElement('img');
             img.src = cite.dataset.img;
             img.className = 'cite-img-overlay';
+            // Tapping the photo dismisses only the photo; the margin note
+            // stays. stopPropagation prevents the document-level cite and
+            // margin-note handlers from firing.
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                img.remove();
+                openCite = null;
+            });
             // On mobile, append to <body> so the overlay escapes the
             // margin-note's stacking context and renders above everything.
             // On desktop, keep the legacy anchor (negative offsets relative
