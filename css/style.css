@@ -85,7 +85,12 @@ p {
     align-items: baseline;
     justify-content: flex-start; /* pushes nav-bar to the right */
     flex-wrap: nowrap; /* allows wrapping on smaller screens */
-    min-width: 1024px;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        min-width: 1024px;
+    }
 }
 
 h1 {
@@ -738,13 +743,85 @@ main {
         transform: none;
     }
 
+    h1 {
+        line-height: 1.1em;
+    }
+
+    /* Dim backdrop appears whenever any margin note is open.
+       The underlined trigger is lifted above the backdrop so the user
+       still sees what they clicked as context. */
+    body:has(.margin-note.is-visible)::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.75);
+        z-index: 500;
+        pointer-events: none;
+    }
+
+    .annotated.is-active {
+        position: relative;
+        z-index: 800;
+        background: #fff;
+        box-shadow: 0 0 0 4px #fff;
+    }
+
+    /* Margin notes render as a centered card that overlays the body text;
+       the lifted trigger word floats above the card as visual context. */
+    .margin-note,
+    .margin-note[data-side="left"],
+    .margin-note[data-side="right"] {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        width: 88vw;
+        max-width: 480px;
+        max-height: 70vh;
+        overflow-y: auto;
+        margin: 0;
+        padding: 18px 20px;
+        background: #fff;
+        border: none;
+        border-left: 2px solid #444;
+        text-align: left;
+        z-index: 700;
+        display: none;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
     .margin-note.is-visible {
+        display: block;
         opacity: 1;
         pointer-events: auto;
     }
 
+    /* Cite-img overlays render as a centered modal-style image that the
+       user can tap-anywhere to dismiss. Desktop behavior is unchanged. */
     .cite-img-overlay {
-        max-width: 80vw;
-        --img-left: -300px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        max-width: 90vw;
+        max-height: 80vh;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Tap-to-toggle self-gif: when open, render the video inline below
+       the underlined text instead of as a fixed cursor-follow preview. */
+    #self-gif.is-open #gif {
+        position: static;
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0.6em auto;
+        aspect-ratio: 5 / 3;
+        pointer-events: auto;
     }
 }

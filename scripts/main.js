@@ -34,12 +34,17 @@ function setupMarginNotes() {
             });
 
             if (!isVisible) {
-                // Position note vertically aligned with trigger
-                const wrapper = trigger.closest('.about-text-wrapper');
-                if (wrapper) {
-                    const wrapperRect = wrapper.getBoundingClientRect();
-                    const triggerRect = trigger.getBoundingClientRect();
-                    note.style.top = (triggerRect.top - wrapperRect.top) + 'px';
+                // Position note vertically aligned with trigger (desktop only;
+                // on mobile the note renders inline below the trigger).
+                if (window.innerWidth > 768) {
+                    const wrapper = trigger.closest('.about-text-wrapper');
+                    if (wrapper) {
+                        const wrapperRect = wrapper.getBoundingClientRect();
+                        const triggerRect = trigger.getBoundingClientRect();
+                        note.style.top = (triggerRect.top - wrapperRect.top) + 'px';
+                    }
+                } else {
+                    note.style.top = '';
                 }
                 note.classList.add('is-visible');
                 note.setAttribute('aria-hidden', 'false');
@@ -48,9 +53,13 @@ function setupMarginNotes() {
         });
     });
 
-    // Click outside closes notes
+    // Click outside closes notes. On mobile the note itself is also a
+    // dismiss target (tap-anywhere); on desktop the note is interactive
+    // (links, cite-imgs) so taps inside it don't close.
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.annotated') && !e.target.closest('.margin-note')) {
+        const insideTrigger = e.target.closest('.annotated');
+        const insideNote = window.innerWidth > 768 && e.target.closest('.margin-note');
+        if (!insideTrigger && !insideNote) {
             document.querySelectorAll('.margin-note.is-visible').forEach(n => {
                 n.classList.remove('is-visible');
                 n.setAttribute('aria-hidden', 'true');
@@ -90,6 +99,22 @@ function setupCiteImages() {
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.cite-img')) {
             document.querySelectorAll('.cite-img-overlay').forEach(el => el.remove());
+        }
+    });
+}
+
+function setupSelfGifMobile() {
+    const selfGif = document.getElementById("self-gif");
+    if (!selfGif) return;
+
+    selfGif.addEventListener("click", (e) => {
+        e.stopPropagation();
+        selfGif.classList.toggle("is-open");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest('#self-gif')) {
+            selfGif.classList.remove("is-open");
         }
     });
 }
@@ -160,8 +185,12 @@ function makeCard(meta, authors, title, desc="", href = '#') {
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOM loaded, checking mobile again");
 
-  // Handle mobile detection first
-  if (isMobile()) {
+  // Handle mobile detection first. Pages that opt in via
+  // `<body data-allow-mobile>` skip the blocker and get a tap-to-toggle
+  // self-gif instead of the cursor-follow video.
+  const allowMobile = document.body.dataset.allowMobile !== undefined;
+
+  if (isMobile() && !allowMobile) {
     console.log("Mobile detected, showing blocker");
     const video = document.getElementById("gif");
 
@@ -190,6 +219,9 @@ document.addEventListener('DOMContentLoaded', function() {
       blocker.classList.remove("hidden");
       blocker.classList.add("flex");
     }
+  } else if (isMobile()) {
+    console.log("Mobile detected, page opts in — setting up tap-to-toggle self-gif");
+    setupSelfGifMobile();
   } else {
     console.log("Not mobile, setting up video follow");
     setupVideoFollow();
