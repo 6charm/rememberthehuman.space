@@ -278,6 +278,10 @@ h1 a {
     pointer-events: auto;
 }
 
+.arena-logo:last-child {
+    margin-right: 0;
+}
+
 .arena-logo-link {
   display: inline-block;
   text-decoration: none;
@@ -1150,6 +1154,18 @@ main {
         margin: 0.6em auto;
         aspect-ratio: 5 / 3;
         pointer-events: auto;
+    }
+
+    /* Stars: on mobile, scroll with the page (not fixed) and sit a
+       comfortable distance below the last line of text. */
+    .star-logos-arena {
+        position: static;
+        transform: none;
+        margin: 2rem auto 1rem;
+    }
+
+    .arena-logo-link {
+        z-index: auto;
     }
 }
 
