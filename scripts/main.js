@@ -234,10 +234,8 @@ function makeProjectCard(title, href = '#', num = 1) {
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOM loaded, checking mobile again");
 
-  // Handle mobile detection first. Pages that opt in via
-  // `<body data-allow-mobile>` skip the blocker and get a tap-to-toggle
-  // self-gif instead of the cursor-follow video.
-  const allowMobile = document.body.dataset.allowMobile !== undefined;
+  // Mobile blocker disabled — every page is allowed on mobile.
+  const allowMobile = true;
 
   if (isMobile() && !allowMobile) {
     console.log("Mobile detected, showing blocker");

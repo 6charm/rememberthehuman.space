@@ -431,7 +431,24 @@ main {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+}
+
+.site-header h1 {
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .site-header h1 {
+        flex: 1 0 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        flex-wrap: nowrap;
+    }
 }
 
 .site-header a:hover {
@@ -496,6 +513,22 @@ main {
     flex-shrink: 0;
     margin-right: 9.1rem;
     text-align: left;
+  }
+
+  .project-back {
+    display: inline-block;
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    margin-bottom: 1.1rem;
+    transition: color 180ms ease, letter-spacing 180ms ease;
+  }
+
+  .project-back:hover {
+    color: rgb(40, 40, 40);
+    letter-spacing: 0.12em;
   }
 
   .note-title {
@@ -616,7 +649,7 @@ main {
 
   /* Project log: hidden ladder behind a [log] toggle */
   .log-toggle {
-    margin: 0 0 2.4rem 0;
+    margin: 0 0 1.2rem 0;
     font-family: "DM Mono", monospace;
     font-size: 0.8rem;
   }
@@ -645,15 +678,20 @@ main {
 
   .log-ladder {
     list-style: none;
-    padding: 0;
+    padding: 0rem 1.5rem 0 0;
     margin: 0 0 0 0.6rem;
     border-left: 1px solid rgb(210, 210, 210);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.8rem;
+    row-gap: 0.1rem;
   }
 
   .log-ladder li {
     padding: 0.45rem 0 0.45rem 1.1rem;
     position: relative;
     line-height: 1.3;
+    white-space: nowrap;
   }
 
   .log-ladder li::before {
@@ -1173,4 +1211,58 @@ main {
 
 .log-panel p {
   margin: 0 0 1.1em 0;
+}
+
+.log-panel img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.2rem 0;
+  border-radius: 2px;
+}
+
+.log-panel figure {
+  margin: 1.4rem 0;
+}
+
+.log-panel figcaption {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: rgb(140, 140, 140);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .note-page-content {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .note-title-col {
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .note-text-wrapper {
+    max-width: 100%;
+    transform: none;
+    margin: 0;
+  }
+
+  .log-panel {
+    position: static;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+    border-left: none;
+    border-top: 1px solid rgb(220, 220, 220);
+    margin-top: 2rem;
+  }
+
+  .log-ladder {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.4rem;
+    padding-right: 0;
+  }
 }

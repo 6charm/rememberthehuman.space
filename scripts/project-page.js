@@ -25,6 +25,7 @@ function renderTitleCol(project) {
     .join(", ");
 
   return `
+    <a class="project-back" href="../../#projects">← projects</a>
     <div class="note-title">${project.shortName}${hostLink(project.homepage)}</div>
     <div class="note-author">${authors}</div>
   `;
@@ -39,7 +40,7 @@ function renderLogToggle(project) {
 
   const items = project.log
     .slice()
-    .sort((a, b) => b.week - a.week)
+    .sort((a, b) => a.week - b.week)
     .map(entry => `
       <li>
         <a href="log/week-${entry.week}.html" data-week="${entry.week}">

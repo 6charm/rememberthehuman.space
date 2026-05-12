@@ -27,13 +27,7 @@
           <div data-slot="log"></div>
           <div data-slot="subtitle"></div>
 
-          <p>RTEMS is an open source Real Time Operating System (RTOS) that supports open standard application programming interfaces (API) such as POSIX. RTEMS stands for Real-Time Executive for Multiprocessor Systems. It is used in space flight, medical, networking and many more embedded devices. RTEMS currently supports 18 processor architectures and approximately 200 Board support packages. etc. etc.</p>
-
-          <!-- <p>TODO — write the project scope: which lwIP features are missing, which RTEMS BSPs are in scope, what "done" looks like at the midterm and final evaluations, and how the deliverables tie back to the RTEMS networking roadmap.</p> -->
-
-          <!-- <p>TODO — write the personal motivation: what drew me to systems-level networking work, prior context with embedded TCP/IP stacks, and what I expect to learn over the summer.</p> -->
-
-          <!-- <p>TODO — references and reading list (RFCs, lwIP design docs, RTEMS networking history) will accumulate here.</p> -->
+          <p>This project brings up lwIP on the TI TMS570LC43x under RTEMS. The TMS570 is a high-reliability MCU most recently used as the flight controller on the Ingenuity helicopter. A secondary contribution reintegrates the lwIP stack at the netconn API layer, which eliminates BSD socket indirection, reduces memory footprint, and enables zero-copy tx/rx in RTEMS applications.<p>
         </div>
       </div>
 
