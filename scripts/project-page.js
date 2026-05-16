@@ -24,10 +24,15 @@ function renderTitleCol(project) {
       : a.name)
     .join(", ");
 
+  const hero = project.heroImage
+    ? `<img class="note-hero" src="${project.heroImage}" alt="${project.shortName}">`
+    : "";
+
   return `
     <a class="project-back" href="../#projects">← projects</a>
     <div class="note-title">${project.shortName}${hostLink(project.homepage)}</div>
     <div class="note-author">${authors}</div>
+    ${hero}
   `;
 }
 

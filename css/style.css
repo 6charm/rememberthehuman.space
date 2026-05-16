@@ -614,6 +614,16 @@ main {
     border-bottom-color: #D40000;
   }
 
+  .note-hero {
+    display: block;
+    max-width: 40rem;
+    width: 100%;
+    height: auto;
+    margin-top: -5rem;
+    transform: rotate(0deg);
+    margin-left: -9.5rem;
+  }
+
   .note-text-wrapper {
     position: relative;
     max-width: 44rem;
@@ -1259,6 +1269,10 @@ main {
     min-width: 0;
     margin-right: 0;
     margin-bottom: 2rem;
+  }
+
+  .note-hero {
+    display: none;
   }
 
   .note-text-wrapper {

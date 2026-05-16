@@ -13,6 +13,7 @@ export const projects = [
     homepage: "https://www.rtems.org/",
     programUrl: "https://summerofcode.withgoogle.com/programs/2026/projects/mixRtTp4",
     href: "rtems/",
+    heroImage: "assets/no-bg-tms570.png",
     log: [
       { week: 1, title: "", date: "24-05-2026" },
       { week: 2, title: "", date: "31-05-2026" },
