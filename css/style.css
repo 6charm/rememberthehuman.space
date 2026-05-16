@@ -624,6 +624,18 @@ main {
     margin-left: -9.5rem;
   }
 
+
+  .note-hero {
+    display: block;
+    max-width: 20rem;
+    width: 100%;
+    height: auto;
+    margin-top: -6rem;
+    transform: rotate(90deg);
+    margin-left: -2.8rem;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
   .note-text-wrapper {
     position: relative;
     max-width: 44rem;
