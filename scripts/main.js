@@ -257,9 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="text-5xl">Please</span><br>
           visit from a desktop computer
         </div>
-        <div class="star-logo-mobile">
-          <img src="/assets/armaan-logo.svg" width="64" height="64" alt="logo">
-        </div>
       `;
       document.body.prepend(blocker);
     } else {

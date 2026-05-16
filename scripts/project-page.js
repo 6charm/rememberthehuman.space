@@ -25,7 +25,7 @@ function renderTitleCol(project) {
     .join(", ");
 
   return `
-    <a class="project-back" href="../../#projects">← projects</a>
+    <a class="project-back" href="../#projects">← projects</a>
     <div class="note-title">${project.shortName}${hostLink(project.homepage)}</div>
     <div class="note-author">${authors}</div>
   `;

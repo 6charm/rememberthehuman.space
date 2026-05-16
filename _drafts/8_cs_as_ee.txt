@@ -1,0 +1,5 @@
+Been trying to answer the question: What can be learned as a computer scientist, and what is better left to an EE.
+Its only in the last few months that I've been surrounded by some of the (future)best EEs in the country. This
+has given me some clarity:
+- The best EEs care the most about designing chips - sensors, cpu pipelines. If we're talking abstractions, the highest they
+are comfortable is the circuit diagram/datasheet. I operate just above this level - and can complement perfectly.

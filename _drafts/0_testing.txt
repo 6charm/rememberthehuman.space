@@ -1,0 +1,77 @@
+*** octotat-black for general stories (on role models, on apathy etc.)
+*** ocototat-red for defence company related
+
+- Testing notes section on my website.
+- long format audio rather than writing, bec i realozed i HAVE
+to get better at verbalizing my thoughts.
+
+
+
+
+- going to build the most advanced defence-tech company in (should be FOR) my country, 
+and to build trust and credibillity with the general public, its important
+to be able to zoom out when explaining the work. The work is incredibly technical,
+and I'm going to spend most of my time studying, working on projects, getting the
+right internships.
+
+I'll be putting up audio clips every week. and if you find these on the 
+intrnet you should be able to comment and react just like you would on soundcloud
+
+
+- when i looked up founders of current comapneis I was disappointed
+by the way they protrayed their work. 
+
+
+and the main reason
+- is that I'm going to build the most advanced defence-tech company in my country.
+- looked up indian tech founder interviews, disappointed. Most were rambling, unable to zoom out, 
+ - does not help your coredibility.
+- must admit I've been this way while explaining my work as a STEM graduate.
+- Technical credibility built silently - through study, internships and projects,
+- To build trust with the general population - I need to make the technology easy to digest, 
+make it obvious, able to highlight the wider context rather than the details. 
+- 
+
+- I'm going to put out one audio clip a day.
+- im going to end up being good at verbalizing my thoughts. 
+- feedback in person, but if you find this on the internet
+you can comment at timestamps - bit like soundcloud.
+- For feedback I'm going to make the playback like soundcloud.
+- If you find this on the internet you can leave a comment.
+
+<link>This graph<link> is an abstraction over the timetable
+
+
+@Mar 5
+Engineering trains you to focus on the details and model the world as constrained systems, mathematics convinces you that most problems can be solved by logical reasoning, and the right computational tools, once developed, empower you to act on this belief. The process of building technology require(d) humans to adopt such an approach.
+
+
+<annot on the right abstractions> In the broadest terms, an abstraction is a particular representation of information. Every "higher" abstraction is built over "lower" abstractions, and a [3]physicist would agree that the _particle_ is the lowermost. A [4][5]mathematician would agree that the most creative part of their field is in discovering useful "super-high" abstractions. Super-high abstractions are hard to explain.
+
+https://iitd-plos.github.io/col718/ref/arm-instructionset.pdf
+
+Abstractions are diverse. The series of <link>notes in sheet music<link> is an abstraction over the songs we listen to. <link>This timetable<link> is an abstraction over the daily operations of a network of city trains. The <link>Instruction Set Architecture<link> is an abstraction over the operations of a CPU.
+
+
+
+
+Mathematics teaches you that most problems can be solved by logical reasoning on the right abstractions. Engineering trains you to implement abstractions through a detailed understanding
+of real constraints. These are two fundamental requirements to engage in the process of building technology. Throughout our history, humans involved in building better technologies have had to hone their abilities in these fields.
+
+
+Today, we are placing bets on the extent that AI can take over this process. LLMs were traditionally believed to be incapable of synthesizing new information, but it appears that the goalposts are shifting. With this trend, could a future AI model produce better mathematical abstractions, better mechanical designs, better firmware, even better chips than any human? I'm betting yes.
+
+
+
+
+the information related to train arrival times at a station can be abstracted by a timetable.
+
+Super-high abstractions are hard to explain.
+
+```
+  <span class="cite-img" data-img="../assets/friend-physicist.jpg"
+        style="--img-top: 0; --img-left: -400px; --img-width: 220px">[3]</span>
+
+```
+
+/home/armaan/.claude/plans/wise-drifting-clarke.md : refactor plan

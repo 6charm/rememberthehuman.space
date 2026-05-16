@@ -1,0 +1,229 @@
+START: The smartest guy I know asked me if I wished I was born in the US.
+- were talking about shield AI us-based defence firm - and how we'd need US secret service clearance to 
+intern there. No comparable companies exist in India today - this brought a larger point about the need 
+for more private-sector defence firms in our country.
+
+Shield.Ais best computer-vision systems can detect and track objects just *2 pixels wide.
+The defence arm of the Jindal Steel spent 90M USD on one of their drone platorms, but these 
+almost certainly come with restrictions. Negotiators have very little leverage
+without frontier defence-tech firms of our own. In fact, unrestricted access to frontier technologies has
+to be built indigenously.
+
+I've been thinkinig about the kind of work it would take to build
+such a firm from the ground up:
+- Defence applications need hardened software interfaces operating at microsecond scale latencies.
+- Discovering the optimal vision algorithms (the intelligence) needs continuous iteration and research. 
+We'd need an evironment of top-tier specialist engineers who are also capable of frontier research. 
+I know exactly the people that would join, but we're scattered all over the world right now.
+Bringing this team together is going to be exciting.
+
+In the mean time, given my background with the services, I will bear the additional
+resonsibility of defining the problem more effectively by taking input from service members.
+
+Systems Architect: Armaan
+Embedded Engineer: Tejal (BCN)
+ML Theory: Aditya A 
+ML Applied: Aditya S 
+Physics Theory: Atharva
+Mech (Propulsion systems, etc): ...?
+
+
+SG 1st meet 31/12/2025
+- Met commodore sanjoy gupta (i know him through squash)
+- Former acns air and squadron-mates with my grandad.
+- Spoke about the defence procurement procedures (NSQRs)
+- He's going to introduce me to another squadronmate (his junior)
+who worked at HAL for a long time but works at an AI firm now
+and he's in the defence-tech space.
+- Meet to talk about the market dynamics.
+
+Let me know if you want to be involved in this longer term
+- would help if I had a partner at this meeting.
+Tell me soon, because i'd be looking for someone else.
+
+Notes from SG meet:
+DRDO pain points
+- Slow as fuck (huge org low motivation)
+- On the Navy side - changing NSQRs
+Recommendation: NSQRs as guide.
+
+Q. Why do you want to build it?
+- It wasn't apparent to sanjoy gupta why I decided to go to defence tech
+
+
+
+and how 
+
+
+
+
+Lastly, I find that its helpful to keep in mind who a defence-firm is for. 
+Proximity to service-members will help build trust initially.
+
+
+
+
+
+
+
+
+
+
+
+
+
+In nov2024, the defence arm of the jindal steel group signed a 90million USD deal for the purchase of one of 
+shield.AI's drone platforms. Shield.Ais best computer-vision systems 
+can detect and track objects just *2 pixels wide, but its almost guaranteed that the platforms provided in the deal 
+will be restricted through various means.
+
+There are no comparable platforms in our country today, and its
+why I believe JSW had very litle leverage fleshing out the details. For example, 
+
+
+
+We were talking about shieldAI - they're a startup based in 
+the US whose computer-vision systems can detect objects as small as *2 pixels,
+comparing the company to homegrown alternatives. Working there needed US SS clearance
+and US citizenship.
+
+The second point not said:
+He's in the grad-school cycle right now. For international students,
+its a tedious process. Dspite being the best at the 
+most intense engineering university in the country, 
+there's still insecurity about making it. 
+Its easy to fantasize, when you're on the 6th revision of you Statement of purpose
+trying to convince a group who want to reject you that 
+you are worth it. 
+
+I see people queing up in the rain, waiting for the buses
+and feel fortunate I can afford an auto or cab at my convenience.
+
+Despite being the best at the most intense engineering university in the country, 
+there's still insecurity about making it.
+
+My response - probably due to growing up around navy service members
+was - "I was born where I was born".
+
+
+My smartest friend asked me if I wished I was born in the US.
+He intends to specialize in machine learning theory at UC Berkeley - and
+he's insecure about his chances despite being one the most capable individuals i've
+encountered during my time at IITB. This is natural - for international students, 
+grad applications are a tedious process, and UC Berkeley is notoriously selective.
+
+We were talking about shield AI and the need for 
+
+In nov2024, the defence arm of the jindal steel group signed a 90million USD deal for the purchase of one of 
+shield.AI's drone platforms. There are no comparable platforms in our country today, and its
+why I believe JSW had very litle leverage fleshing out the details. For example, Shield.Ais best computer-vision systems 
+can detect and track objects just *2 pixels wide, but its almost guaranteed that the platforms provided in the deal 
+will be restricted through various means.
+
+For our country to have unrestricted access to the best in the world, we must build similar systems from
+the ground up. I've been thinking about what that would require:
+- tasks such as discovering the optimal vision algorithms and implementing robust hardware-software interfaces -
+require several rounds of iteration and research.
+- Its absolutely necessary to exist in an environment of specialist engineers who are also capable of frontier research.
+Such an environment exists at companies like shield.AI, but working there requires US Secret Service Clearance :/
+
+Beyond the technical requirements, 
+a strong private-sector firm must 
+- Understanding the pain points that the defence operators face working with goverment firms.
+
+
+
+
+
+Beyond that, through working for the 
+Western Railways during my time at IIT Bombay, I've learned how important it is to get 
+the opinions of service members.
+
+There's definitely more that will be discovered as we progress, but for now
+we have enough information to execute our next steps.
+
+
+The future looks bright.
+
+
+My bet is that in the next decade, improvements 
+will be driven by creativity at the software layers - we are seeing this trend 
+in the latest ML research - newer models are smaller less computationally heavy.
+
+
+
+"I was born where I was born". This was my response when my smartest friend asked
+As someone who grew up around navy service members
+
+
+
+WORKED :) First meet Dec 31 2025
+Good evening Sanjoy uncle,
+Compliments of the season! Hope you’re well.
+
+Armaan Chowfin here (from squash). I got your number from the Vasco Cycling WhatsApp group.
+
+I’m trying to build a clearer understanding of what a strong private-sector defence firm should focus on, 
+and really value your perspective. 
+In particular, I'd like to hear your views on the issues military personnel 
+and other stakeholders face with defence contractors today.
+
+Can we talk one of these days? I’m in Goa till Saturday morning (3rd Jan).
+
+
+
+
+
+
+
+
+To me, the purpose of grad school is to immerse myself in a field that
+I respect
+
+END: "I was born where I was born". 
+And in the ways that I am most capable,
+I will work to improve this country.
+
+
+And its important to contribute to this place
+in the ways that i can.
+
+
+- As someone that grew up around service-members in the Navy,
+my country is my country. 
+
+But he brought about a bigger theme - he's in the grad school cycle right now
+and were reviewing Sops.
+and despite objectively being one of the smartest in the country, 
+
+- and I was in it too last year.
+- spent time at two of the most well known universities in India
+but still incomparable.
+- despite being the best student a the best university in the country,
+there's still insecurity about making it. 
+
+The other point that came up - as I researched defence companies in India
+not well presented.
+- no confidence in the product.
+
+
+This came up when I learned about shield AI - and one of their 
+offerings is the ability to detect objects just 2*2 pixels wide.
+Discovered id need US SS clearance to work there. 
+
+
+
+Who am I going to sell to:
+- Government
+- 
+
+What excites me about this work:
+- 
+
+
+Yesterday I discovered shield AI - they're an AI-first defence company based in the US. 
+They're also the reason I got excited about this field in the first place
+Another - defence is one field where you build competititve advantage
+the more you know. I grew up surrounded by service members in the navy - family
+and friends.
+

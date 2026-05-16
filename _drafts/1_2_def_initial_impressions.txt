@@ -1,0 +1,19 @@
+This christmas break was one of my most productive.
+Had hour-long conversations with a retired chief of naval staff, and in the same week, 
+with the Tech Exective at one of India's leading defence-tech firms. Here's my takeaways: 
+- Indian firms do have a "talent gap" - the best hires aren't choosing to work here. Therefore insecurity about
+skilled dudes being taken to a competitor.
+- Firms like JSW Defence can buy from outside because their strategy is to make incremental
+modifications to fit a spec (NSQR). That is their whole game.
+- Defence procurements start by the specialists in the services developing a requirements spec
+called NSQRs. The government then floats a tender for manufacture.
+- The services "do not know what they want", so the NSQRs are to be ignored.
+- Goverment selects the cheapest in a given category of products.
+- Therefore differentiate based on uniqueness of product, which comes from, again, 
+hiring the best.
+- Funding often comes with constraints - on revenues earned. Therefore build for commercial usecases
+while deep tech research is put on the backseat.
+
+
+In the ideal life I imagine for myself, I'm with my friends, each an expert in their field,
+doing research and building this amazing product, and my competitors are also my friends.

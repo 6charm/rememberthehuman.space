@@ -1,0 +1,55 @@
+ companies that build a physical product being insulated from AI.
+I think youre viewing this as an us vs ai problem. In the world i imagine, each of us is becoming an absolute expert in their field - because it necessary to acheive this massive goal. Sure an AI model should be able to come up with the most optimal designs at every level - assume an AI model that can design processors better than the best humans, design aircraft chassis better than the best humans - this wont change the fact that what we're working towards is necessary. In this case AI is a tool, and I am okay with that - assuming building the best product is the goal.
+
+But I think the goal is living a great life. Building a product that enables this for eveyone is the path. We do this because we are uniquely capable of it
+Then the questions become - do we enjoy the process of our work? Do we enjoy being trusted by other humans? To me the answer is yes.
+
+
+
+each of us is becoming an expert in an area that we are uniquely capable.
+Sure an AI model could design better processors than the best humans, better mech designs than the best humans -
+
+
+this is a doomsday scenario only if we set making the best product as the goal. And atleast to me its unclear whether technical skill is the only contributor to building a great product.
+
+And anyways, I think the goal is living a great life. If we choose a goal each of us is uniquely suited for - building a great product becomes the path to living that great life. The questions are then: Do we enjoy the process of our work? Do we enjoy being trusted by humans?
+
+
+
+
+- because its the ONLY way we can achieve this massive goal.
+
+THinking about what you said about companies insulating from AI
+Fine lets say ...
+In the world i imagine the goal is living a great life. To me that means each of us is doing our best to be an expert in the fields we're unqiuely suited to - whether that came from upbringing/following our interests over time. Its even more when your work is NECESSARY to achieve this massive goal.
+
+So to me the questions are - do we enjoy the process of our work? Do we enjoy being trusted by other humans? I think in this framework its easier to view AI as a tool...
+
+
+in the world that i imagine, each of us doing best to be an expert in the field we're uniquely suited to - whether that came from how we were raised or interests over time -a and fine lets say an ai model could design better processor mech design than the best human. -doomsday is building the best product. I think goal is living a great life and enabling people to live that life - and then the qustions become do we enjoy the process of our work? Do we enjoy being trusted by other humans? I think in this framework AI will be a tool to help us acheive a massive goal.
+
+
+at this point we should know we're better than most people at some things
+
+
+Threat if the goal is unconditionally building a great technical product.
+
+
+In the world I imagine, each of us is working to be the best at the thing we're uniquely capable of - my point is by now we should have an idea of things we're better at than most people -a
+
+
+--
+I was talking to a friend last night. He studies ML theory and seems to think that even companies building physical products wont be insulated from AI.
+I think he has a fair point - there could be an AI model that can design better chips, better firmware, better mechanical models than any human ever could.
+For anyone studying engaging deeply with theoretical Computer Science, the idea of every implementation detail being abstracted away by an AI model is attractive.
+I live on the other end of the spectrum - Computer Systems. Here we're dealing with realism.
+
+
+He views this as an us vs AI problem, and thats where we diverge. I view technically advanced AI as a tool - and its only a threat if we decide unconditionally that our purpose is to build
+
+
+
+I believe it technically advanced AI is only a threat if we
+
+
+- a natural reaction for someone who has been rewarded tremendously for his raw cognitive ability - the very thing AI threatens to devalue.
