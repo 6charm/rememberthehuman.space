@@ -634,6 +634,7 @@ main {
     transform: rotate(90deg);
     margin-left: -2.8rem;
     image-rendering: -webkit-optimize-contrast;
+    pointer-events: none;
   }
 
   .note-text-wrapper {
@@ -797,6 +798,14 @@ main {
   .column-wrapper > * {
     break-inside: avoid;
     margin-bottom: 1.6rem;
+  }
+
+  @media (max-width: 767px) {
+    .column-wrapper {
+      column-count: 2;
+      column-gap: 1.6rem;
+      margin-top: 80px;
+    }
   }
 
   .project-item {

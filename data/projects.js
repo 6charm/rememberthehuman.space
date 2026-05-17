@@ -3,7 +3,7 @@
 
 export const projects = [
   {
-    slug: "rtems",
+    slug: "rt",
     shortName: "RTEMS",
       fullTitle: "GSoC'26: lwIP network stack improvements",
     authors: [
@@ -12,7 +12,7 @@ export const projects = [
     ],
     homepage: "https://www.rtems.org/",
     programUrl: "https://summerofcode.withgoogle.com/programs/2026/projects/mixRtTp4",
-    href: "rtems/",
+    href: "rt/",
     heroImage: "assets/no-bg-tms570.png",
     log: [
       { week: 1, title: "", date: "24-05-2026" },
@@ -23,6 +23,17 @@ export const projects = [
       { week: 6, title: "", date: "28-06-2026" },
       { week: 7, title: "", date: "05-07-2026" }
     ]
+  },
+  {
+    slug: "rk",
+    shortName: "RED/KILL",
+      fullTitle: "Redkill: Formally Verified OS for Embedded Systems",
+    authors: [
+        { name: "Prathu Baronia, Neeraj Upadhyay" }
+    ],
+      homepage: "https://redkill.in",
+    href: "rk/",
+    log: []
   }
 ];
 
