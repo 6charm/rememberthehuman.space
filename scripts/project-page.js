@@ -6,7 +6,7 @@
 // entry reveals that week's content in a right-side panel on the same page.
 // Prose stays as static HTML inside the page — only the chrome is generated.
 
-import { findProject, findWeek } from "../data/projects.js";
+import { findProject, findWeek } from "../data/projects.js?v=2";
 
 function hostLink(url) {
   if (!url) return "";

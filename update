@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# One-shot deploy: bumps cache-buster (if scripts/data changed), commits, pushes.
+#
+# Usage: ./update "commit message"
+
+set -euo pipefail
+cd "$(dirname "$0")"
+
+if [ $# -lt 1 ]; then
+  echo "usage: ./update \"commit message\"" >&2
+  exit 1
+fi
+
+MSG="$1"
+
+# Bump ?v=N only if any cached JS/data file changed since HEAD.
+# Otherwise the bump is noise — HTML/CSS edits don't need it.
+if ! git diff --quiet HEAD -- scripts/ data/ || \
+   ! git diff --quiet --cached -- scripts/ data/; then
+  ./bump.sh
+else
+  echo "no scripts/ or data/ changes — skipping cache-buster bump"
+fi
+
+git add -A
+if git diff --cached --quiet; then
+  echo "nothing to commit"
+  exit 0
+fi
+
+git commit -m "$MSG"
+git push
