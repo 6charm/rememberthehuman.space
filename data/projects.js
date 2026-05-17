@@ -24,17 +24,17 @@ export const projects = [
       { week: 7, title: "", date: "05-07-2026" }
     ]
   },
-  // {
-  //   slug: "rk",
-  //   shortName: "RED/KILL",
-  //     fullTitle: "Redkill: Formally Verified OS for Embedded Systems",
-  //   authors: [
-  //       { name: "Prathu Baronia, Neeraj Upadhyay" }
-  //   ],
-  //     homepage: "https://redkill.in",
-  //   href: "rk/",
-  //   log: []
-  // }
+  {
+    slug: "rk",
+    shortName: "RED/KILL",
+      fullTitle: "Redkill: Formally Verified OS for Embedded Systems",
+    authors: [
+        { name: "Prathu Baronia, Neeraj Upadhyay" }
+    ],
+      homepage: "https://redkill.in",
+    href: "rk/",
+    log: []
+  }
 ];
 
 export function findProject(slug) {
