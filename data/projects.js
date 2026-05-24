@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     slug: "rk",
-    shortName: "RED/KILL",
+    shortName: "REDKILL",
       fullTitle: "Redkill: Formally Verified OS for Embedded Systems",
     authors: [
         { name: "Prathu Baronia, Neeraj Upadhyay" }
