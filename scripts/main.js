@@ -1,5 +1,5 @@
-import { projects } from "../data/projects.js?v=2";
-import { mountProjectPages } from "./project-page.js?v=2";
+import { projects } from "../data/projects.js?v=3";
+import { mountProjectPages } from "./project-page.js?v=6";
 
 // Add debug logging at the top
 console.log("Script loaded");

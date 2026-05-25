@@ -14,9 +14,10 @@ export const projects = [
     programUrl: "https://summerofcode.withgoogle.com/programs/2026/projects/mixRtTp4",
     href: "rt/",
     heroImage: "assets/no-bg-tms570.png",
+    wiki: { label: "TMS570 Wiki", url: "https://gitlab.rtems.org/ar-in0/rtems-lwip/-/wikis/lwIP-Development-Notes-[Wiki]" },
     log: [
-      { week: 1, title: "", date: "24-05-2026" },
-      { week: 2, title: "", date: "31-05-2026" },
+      { week: 1, title: "Flash the TMS570", date: "24-05-2026" },
+      { week: 2, title: "Just checking", date: "31-05-2026" },
       { week: 3, title: "", date: "07-06-2026" },
       { week: 4, title: "", date: "14-06-2026" },
       { week: 5, title: "", date: "21-06-2026" },

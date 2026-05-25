@@ -6,7 +6,7 @@
 // entry reveals that week's content in a right-side panel on the same page.
 // Prose stays as static HTML inside the page — only the chrome is generated.
 
-import { findProject, findWeek } from "../data/projects.js?v=2";
+import { findProject, findWeek } from "../data/projects.js?v=3";
 
 function hostLink(url) {
   if (!url) return "";
@@ -40,6 +40,19 @@ function weekLabel(entry) {
   return entry.title ? `Week ${entry.week}: ${entry.title}` : `Week ${entry.week}`;
 }
 
+function pad2(n) { return String(n).padStart(2, "0"); }
+
+function weekRange(dateStr) {
+  // Input is DD-MM-YYYY; output is "DD-MM-YYYY, DD-MM-YYYY" (start, start+6d).
+  if (!dateStr) return "";
+  const [dd, mm, yyyy] = dateStr.split("-").map(Number);
+  if (!dd || !mm || !yyyy) return dateStr;
+  const start = new Date(Date.UTC(yyyy, mm - 1, dd));
+  const end = new Date(start.getTime() + 6 * 24 * 60 * 60 * 1000);
+  const fmt = d => `${pad2(d.getUTCDate())}-${pad2(d.getUTCMonth() + 1)}-${d.getUTCFullYear()}`;
+  return `${fmt(start)} - ${fmt(end)}`;
+}
+
 function renderLogToggle(project) {
   if (!project.log || project.log.length === 0) return "";
 
@@ -61,6 +74,12 @@ function renderLogToggle(project) {
       <ol class="log-ladder">${items}</ol>
     </details>
   `;
+}
+
+function renderWikiLink(project) {
+  if (!project.wiki || !project.wiki.url) return "";
+  const { label, url } = project.wiki;
+  return `<a class="wiki-link" href="${url}" target="_blank" rel="noopener">[${label}]</a>`;
 }
 
 function fillSlot(root, name, html) {
@@ -109,11 +128,11 @@ function attachLogPanel(root, project) {
     const week = findWeek(project, weekNum);
     const chrome = week
       ? `<h3>${weekLabel(week)}</h3>
-         <div class="log-panel-date">${week.date}</div>`
+         <div class="log-panel-date">${weekRange(week.date)}</div>`
       : "";
 
     try {
-      const res = await fetch(link.getAttribute("href"));
+      const res = await fetch(link.getAttribute("href"), { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const body = await res.text();
       panel.innerHTML = chrome + body;
@@ -127,7 +146,7 @@ function attachLogPanel(root, project) {
 
 function mountLandingPage(root, project) {
   fillSlot(root, "title-col", renderTitleCol(project));
-  fillSlot(root, "log", renderLogToggle(project));
+  fillSlot(root, "log", `<div class="project-toplinks">${renderLogToggle(project)}${renderWikiLink(project)}</div>`);
   fillSlot(root, "subtitle", `<h2 class="note-subtitle">${project.fullTitle}${hostLink(project.programUrl)}</h2>`);
   attachLogPanel(root, project);
 }
