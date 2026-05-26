@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Armaan Chowfin">
     <meta name="robots" content="noindex, nofollow">
-    <script type="module" src="../scripts/main.js?v=2"></script>
+    <script type="module" src="../scripts/main.js?v=3"></script>
     <title>Remember The Human | RTEMS — lwIP network stack</title>
     <link rel="icon" href="../assets/armaan-logo-filled-1.svg" sizes="48X48"/>
     <link rel="preload" as="image" href="../assets/no-bg-tms570.png" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css?v=3"/>
   </head>
   <body data-inner>
     <main>
@@ -30,9 +30,8 @@
 
           <p>This project brings up lwIP on the TI TMS570LC43x under RTEMS. The TMS570 is a high-reliability MCU most recently used as the flight controller on the Ingenuity helicopter. A secondary contribution reintegrates the lwIP stack at the netconn API layer, which eliminates BSD socket indirection, reduces memory footprint, and enables zero-copy tx/rx in RTEMS applications.<p>
         </div>
+        <aside class="log-panel" data-slot="panel"></aside>
       </div>
-
-      <aside class="log-panel" data-slot="panel"></aside>
     </div>
 
     </main>

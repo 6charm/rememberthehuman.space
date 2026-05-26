@@ -1243,29 +1243,22 @@ main {
   color: #D40000;
 }
 
-/* Right-side log panel: shows a week's content in place when a ladder
-   entry is clicked. Absolutely positioned so opening/closing it never
-   shifts the prose body. Sits over the same right gutter that margin
-   notes use; the two are mutually exclusive in practice. */
+/* Log panel: shows a week's content in place when a ladder entry is
+   clicked. Renders below the prose body, separated by a hairline rule.
+   The right margin stays free for future annotations. */
 .log-panel {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 28rem;
-  padding: 0 0 0 3rem;
-  border-left: 1px solid rgb(220, 220, 220);
+  margin-top: 2.4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(220, 220, 220);
   font-family: "Lora", serif;
   font-size: 0.95rem;
   line-height: 1.55;
   color: rgb(40, 40, 40);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 200ms ease;
+  display: none;
 }
 
 .log-panel.open {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 
 .log-panel h3 {
@@ -1340,15 +1333,6 @@ main {
     max-width: 100%;
     transform: none;
     margin: 0;
-  }
-
-  .log-panel {
-    position: static;
-    width: 100%;
-    padding: 1.5rem 0 0 0;
-    border-left: none;
-    border-top: 1px solid rgb(220, 220, 220);
-    margin-top: 2rem;
   }
 
   .log-ladder {
