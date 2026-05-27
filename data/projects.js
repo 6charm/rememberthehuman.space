@@ -32,7 +32,7 @@ export const projects = [
     authors: [
         { name: "Prathu Baronia, Neeraj Upadhyay" }
     ],
-      homepage: "https://redkill.in",
+      homepage: "",
     href: "rk/",
     log: []
   }

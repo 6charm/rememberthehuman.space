@@ -1,4 +1,4 @@
-import { projects } from "../data/projects.js?v=3";
+import { projects } from "../data/projects.js?v=4";
 import { mountProjectPages } from "./project-page.js?v=6";
 
 // Add debug logging at the top
